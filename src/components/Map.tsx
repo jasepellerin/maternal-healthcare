@@ -1,8 +1,8 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
+import {MapContainer, TileLayer, Marker, Popup} from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
-import { hospitals } from '../data/mapData'
-import { HeatmapOverlay } from './HeatmapOverlay'
+import {hospitals} from '../data/mapData'
+import {HeatmapOverlay} from './HeatmapOverlay'
 
 export const Map = () => {
 	const icon = L.icon({
@@ -13,17 +13,17 @@ export const Map = () => {
 	})
 
 	return (
-		<MapContainer center={[43.8041, -120.5542]} zoom={7} style={{ height: '800px', width: '100%' }}>
+		<MapContainer center={[43.8041, -120.5542]} zoom={7} style={{height: '800px', width: '100%'}}>
 			<TileLayer
 				attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
 				url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
 			/>
+			<HeatmapOverlay />
 			{hospitals.map((h) => (
-				<Marker key={h.name} position={h.position} icon={icon}>
+				<Marker key={h.name} position={h.position} icon={icon} zIndexOffset={1000}>
 					<Popup>{h.name}</Popup>
 				</Marker>
 			))}
-			<HeatmapOverlay />
 		</MapContainer>
 	)
 }

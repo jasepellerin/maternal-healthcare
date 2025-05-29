@@ -31,9 +31,16 @@ export function computeDistanceGrid({width, height, map, polygon, hospitalList})
 	let min = Infinity,
 		max = -Infinity
 	const grid: (number | undefined)[][] = Array.from({length: height}, () => Array(width))
+
+	const bounds = map.getPixelBounds()
+	const zoom = map.getZoom()
+
 	for (let y = 0; y < height; y++) {
 		for (let x = 0; x < width; x++) {
-			const latlng = map.containerPointToLatLng([x, y])
+			// Convert canvas pixel to global pixel coordinates
+			const globalX = bounds.min.x + x
+			const globalY = bounds.min.y + y
+			const latlng = map.unproject([globalX, globalY], zoom)
 			if (!pointInPolygon([latlng.lng, latlng.lat], polygon)) {
 				grid[y][x] = undefined
 				continue
