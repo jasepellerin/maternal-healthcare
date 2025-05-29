@@ -1,21 +1,32 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { useMap } from 'react-leaflet'
-import L from 'leaflet'
 import { hospitals, oregonPolygon } from '../data/mapData'
 import { computeDistanceGrid, makeImageData } from 'src/utils/contours'
+import L from 'leaflet'
 
 export const HeatmapOverlay = () => {
 	const map = useMap()
+	const canvasRef = useRef<HTMLCanvasElement>(document.createElement('canvas'))
 
 	useEffect(() => {
-		const canvas = L.DomUtil.create('canvas') as HTMLCanvasElement
+		const canvas = canvasRef.current
+		const overlayPane = map.getPane('overlayPane')
+		if (!overlayPane) return
+
+		if (!overlayPane.contains(canvas)) {
+			overlayPane.appendChild(canvas)
+		}
+
 		const draw = () => {
 			const container = map.getContainer()
 			const width = container.clientWidth
 			const height = container.clientHeight
 			canvas.width = width
 			canvas.height = height
+			const topLeft = map.containerPointToLayerPoint([0, 0])
+			L.DomUtil.setPosition(canvas, topLeft)
 			canvas.style.pointerEvents = 'none'
+			canvas.style.zIndex = '400'
 
 			const { grid } = computeDistanceGrid({
 				width,
@@ -46,24 +57,13 @@ export const HeatmapOverlay = () => {
 			ctx.putImageData(img, 0, 0)
 		}
 
-		const CustomLayer = L.Layer.extend({
-			onAdd() {
-				const pane = map.getPane('overlayPane')
-				pane.appendChild(canvas)
-				draw()
-				map.on('moveend zoomend resize', draw)
-			},
-			onRemove() {
-				if (canvas.parentNode) canvas.parentNode.removeChild(canvas)
-				map.off('moveend zoomend resize', draw)
-			}
-		})
-
-		const layer = new CustomLayer()
-		layer.addTo(map)
-
+		draw()
+		map.on('moveend zoomend resize', draw)
 		return () => {
-			layer.remove()
+			map.off('moveend zoomend resize', draw)
+			if (canvas.parentNode === overlayPane) {
+				overlayPane.removeChild(canvas)
+			}
 		}
 	}, [map])
 
