@@ -4,13 +4,16 @@
 	"version": "1.0.0",
 	"main": "src/index.tsx",
 	"license": "MIT",
+	"homepage": "https://jasepellerin.github.io/maternal-healthcare",
 	"scripts": {
 		"dev:base": "webpack-cli serve --mode=development --env development --hot",
 		"dev": "nodemon --watch webpack.config.ts --watch package.json --ext ts,json --exec \"yarn dev:base\"",
 		"build": "webpack --mode=production --env production --progress",
 		"lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
 		"lint:fix": "eslint './src/**/*.{ts,tsx,js,jsx}' --fix",
-		"format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
+		"format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",
+		"predeploy": "yarn build",
+		"deploy": "gh-pages -d dist"
 	},
 	"devDependencies": {
 		"@types/d3-scale-chromatic": "^3.1.0",
@@ -29,6 +32,7 @@
 		"eslint-plugin-react-hooks": "5.2.0",
 		"eslint-webpack-plugin": "4.2.0",
 		"fork-ts-checker-webpack-plugin": "9.1.0",
+		"gh-pages": "^6.3.0",
 		"html-webpack-plugin": "5.6.3",
 		"nodemon": "^3.1.10",
 		"prettier": "3.5.3",
