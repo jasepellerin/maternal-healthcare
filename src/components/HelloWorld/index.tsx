@@ -1,6 +1,4 @@
-import React from 'react'
-
-const HelloWorld: React.FC = () => (
+export const HelloWorld = () => (
 	<>
 		<h1>Hello World</h1>
 
@@ -18,5 +16,3 @@ const HelloWorld: React.FC = () => (
 		</p>
 	</>
 )
-
-export default HelloWorld

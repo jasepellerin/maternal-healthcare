@@ -7,7 +7,8 @@
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
-		"plugin:react/recommended"
+		"plugin:react/recommended",
+		"plugin:react/jsx-runtime"
 	],
 	"parserOptions": {
 		"project": ["tsconfig.json"],
@@ -27,6 +28,9 @@
 			}
 		],
 		"react/prop-types": "off",
+		"react/react-in-jsx-scope": "off",
+		"react/jsx-uses-react": "off",
+		"react/jsx-uses-vars": "off",
 		"react-hooks/rules-of-hooks": "error",
 		"react-hooks/exhaustive-deps": "warn",
 		"no-shadow": ["error", {"builtinGlobals": false, "hoist": "functions", "allow": []}]
