@@ -1,8 +1,8 @@
-import {useEffect} from 'react'
-import {useMap} from 'react-leaflet'
+import { useEffect } from 'react'
+import { useMap } from 'react-leaflet'
 import L from 'leaflet'
-import {hospitals, oregonPolygon} from '../data/mapData'
-import {computeDistanceGrid, makeImageData, drawContours} from 'src/utils/contours'
+import { hospitals, oregonPolygon } from '../data/mapData'
+import { computeDistanceGrid, makeImageData } from 'src/utils/contours'
 
 export const HeatmapOverlay = () => {
 	const map = useMap()
@@ -17,7 +17,7 @@ export const HeatmapOverlay = () => {
 			canvas.height = height
 			canvas.style.pointerEvents = 'none'
 
-			const {grid} = computeDistanceGrid({
+			const { grid } = computeDistanceGrid({
 				width,
 				height,
 				map,
@@ -25,11 +25,11 @@ export const HeatmapOverlay = () => {
 				hospitalList: hospitals
 			})
 			const colorStops = [
-				{max: 15, color: [0, 100, 0, 242]},
-				{max: 30, color: [102, 205, 102, 242]},
-				{max: 45, color: [255, 255, 0, 242]},
-				{max: 60, color: [255, 165, 0, 242]},
-				{max: 75, color: [255, 0, 0, 242]}
+				{ max: 15, color: [0, 100, 0, 242] },
+				{ max: 30, color: [102, 205, 102, 242] },
+				{ max: 45, color: [255, 255, 0, 242] },
+				{ max: 60, color: [255, 165, 0, 242] },
+				{ max: 75, color: [255, 0, 0, 242] }
 			]
 			const ctx = canvas.getContext('2d')!
 			const img = makeImageData({
@@ -44,7 +44,6 @@ export const HeatmapOverlay = () => {
 				}
 			})
 			ctx.putImageData(img, 0, 0)
-			drawContours(ctx, grid, width, height)
 		}
 
 		const CustomLayer = L.Layer.extend({
