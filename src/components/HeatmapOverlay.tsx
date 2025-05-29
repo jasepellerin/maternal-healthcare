@@ -3,6 +3,7 @@ import { useMap } from 'react-leaflet'
 import isochrone from '../data/hospitals_isochrone.json'
 import L from 'leaflet'
 import { oregonPolygon } from '../data/mapData'
+import { HeatmapLegend } from './Legend'
 
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
@@ -67,7 +68,6 @@ export const HeatmapOverlay = () => {
 			)
 			for (const feature of sortedFeatures) {
 				const value = feature.properties?.value
-				console.log('Feature value (seconds):', value)
 				let color = [255, 0, 0, 242]
 				for (const stop of colorStops) {
 					if (value <= stop.max * 60) {
@@ -97,50 +97,29 @@ export const HeatmapOverlay = () => {
 
 		draw()
 		map.on('moveend zoomend resize', draw)
+
+		// --- Add smooth transition for overlay on zoom ---
+		const handleZoomAnim = () => {
+			canvas.style.transition = 'opacity 0.3s'
+			canvas.style.opacity = '0.1'
+		}
+		const handleZoomEnd = () => {
+			canvas.style.transition = 'opacity 0.3s'
+			canvas.style.opacity = '0.6'
+		}
+		map.on('zoomanim', handleZoomAnim)
+		map.on('zoomend', handleZoomEnd)
+		// --- End smooth transition ---
+
 		return () => {
 			map.off('moveend zoomend resize', draw)
+			map.off('zoomanim', handleZoomAnim)
+			map.off('zoomend', handleZoomEnd)
 			if (canvas.parentNode === overlayPane) {
 				overlayPane.removeChild(canvas)
 			}
 		}
 	}, [map, isochrones])
 
-	const HeatmapLegend = () => (
-		<div
-			style={{
-				position: 'absolute',
-				bottom: 20,
-				left: 20,
-				background: 'rgba(255,255,255,0.9)',
-				padding: 8,
-				borderRadius: 4,
-				zIndex: 1000,
-				boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
-			}}
-		>
-			<div style={{ fontWeight: 600, marginBottom: 4 }}>Travel Time (min)</div>
-			{colorStops.map((stop, i) => (
-				<div key={stop.max} style={{ display: 'flex', alignItems: 'center', marginBottom: 2 }}>
-					<div
-						style={{
-							width: 24,
-							height: 12,
-							background: `rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]},${stop.color[3] / 255})`,
-							marginRight: 8,
-							border: '1px solid #aaa'
-						}}
-					/>
-					<span>
-						{i === 0 ? 0 : colorStops[i - 1].max}–{stop.max} min
-					</span>
-				</div>
-			))}
-		</div>
-	)
-
-	return (
-		<>
-			<HeatmapLegend />
-		</>
-	)
+	return <HeatmapLegend />
 }
