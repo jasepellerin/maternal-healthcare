@@ -5,13 +5,15 @@
 	"main": "src/index.tsx",
 	"license": "MIT",
 	"scripts": {
-		"dev": "webpack-cli serve --mode=development --env development --open --hot",
+		"dev:base": "webpack-cli serve --mode=development --env development --hot",
+		"dev": "nodemon --watch webpack.config.ts --watch package.json --ext ts,json --exec \"yarn dev:base\"",
 		"build": "webpack --mode=production --env production --progress",
 		"lint": "eslint './src/**/*.{ts,tsx,js,jsx}'",
 		"lint:fix": "eslint './src/**/*.{ts,tsx,js,jsx}' --fix",
 		"format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'"
 	},
 	"devDependencies": {
+		"@types/leaflet": "^1.9.18",
 		"@types/node": "22.15.22",
 		"@types/react": "19.1.6",
 		"@types/react-dom": "19.1.5",
@@ -19,6 +21,7 @@
 		"@types/webpack-dev-server": "4.7.2",
 		"@typescript-eslint/eslint-plugin": "8.33.0",
 		"@typescript-eslint/parser": "8.33.0",
+		"css-loader": "^7.1.2",
 		"eslint": "8.57.1",
 		"eslint-plugin-import": "2.31.0",
 		"eslint-plugin-react": "7.37.5",
@@ -26,7 +29,9 @@
 		"eslint-webpack-plugin": "4.2.0",
 		"fork-ts-checker-webpack-plugin": "9.1.0",
 		"html-webpack-plugin": "5.6.3",
+		"nodemon": "^3.1.10",
 		"prettier": "3.5.3",
+		"style-loader": "^4.0.0",
 		"ts-loader": "9.5.2",
 		"ts-node": "10.9.2",
 		"tsconfig-paths-webpack-plugin": "4.2.0",
@@ -36,7 +41,10 @@
 		"webpack-dev-server": "5.2.1"
 	},
 	"dependencies": {
+		"leaflet": "^1.9.4",
 		"react": "^19.0.0",
-		"react-dom": "^19.0.0"
+		"react-dom": "^19.0.0",
+		"react-leaflet": "^5.0.0",
+		"react-leaflet-heatmap-layer-v3": "^3.0.3-beta-1"
 	}
 }
