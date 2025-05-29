@@ -1,9 +1,9 @@
 export const hospitals = [
-	{name: 'OHSU Hospital', position: [45.4995, -122.6865] as [number, number]},
-	{name: 'Salem Hospital', position: [44.9308, -123.0176] as [number, number]},
-	{name: 'Sacred Heart Medical Center', position: [44.0455, -123.0951] as [number, number]},
-	{name: 'Providence St. Vincent', position: [45.5102, -122.7796] as [number, number]},
-	{name: 'Asante Rogue Regional', position: [42.3135, -122.849] as [number, number]}
+	{ name: 'OHSU Hospital', position: [45.4995, -122.6865] as [number, number] },
+	{ name: 'Salem Hospital', position: [44.9308, -123.0176] as [number, number] },
+	{ name: 'Sacred Heart Medical Center', position: [44.0455, -123.0951] as [number, number] },
+	{ name: 'Providence St. Vincent', position: [45.5102, -122.7796] as [number, number] },
+	{ name: 'Asante Rogue Regional', position: [42.3135, -122.849] as [number, number] }
 ]
 
 // Oregon boundary (simplified, low-res, [lng, lat])
