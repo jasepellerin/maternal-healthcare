@@ -1,6 +1,6 @@
 import React from 'react'
-import {HelloWorld} from 'components/HelloWorld'
+import {Map} from 'components/Map'
 
-const App: React.FC = () => <HelloWorld />
+const App: React.FC = () => <Map />
 
 export default App
