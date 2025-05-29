@@ -1,5 +1,3 @@
-import { contours } from 'd3-contour'
-
 function haversine(lat1: number, lng1: number, lat2: number, lng2: number) {
 	const toRad = (d: number) => (d * Math.PI) / 180
 	const R = 6371 // km
