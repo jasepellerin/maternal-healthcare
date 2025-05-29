@@ -1,6 +1,6 @@
 {
-	"name": "bc-heatmaps",
-	"description": "BC Heatmaps",
+	"name": "maternal-healthcare",
+	"description": "Connected access to maternal healthcare providers",
 	"version": "1.0.0",
 	"main": "src/index.tsx",
 	"license": "MIT",
