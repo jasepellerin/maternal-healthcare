@@ -5,11 +5,10 @@ import { hospitals } from '../data/mapData'
 import { HeatmapOverlay } from './HeatmapOverlay'
 
 export const Map = () => {
-	const icon = L.icon({
-		iconUrl: 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/images/marker-icon.png',
-		iconSize: [25, 41],
-		iconAnchor: [12, 41],
-		popupAnchor: [1, -34]
+	const icon = L.divIcon({
+		className: '',
+		html: `<div style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#1976d2;color:#fff;font-weight:bold;font-size:20px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">H</div>`,
+		iconAnchor: [16, 16]
 	})
 
 	return (

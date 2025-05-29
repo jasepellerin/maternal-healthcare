@@ -27,6 +27,7 @@ export const HeatmapOverlay = () => {
 			L.DomUtil.setPosition(canvas, topLeft)
 			canvas.style.pointerEvents = 'none'
 			canvas.style.zIndex = '400'
+			canvas.style.opacity = '0.6'
 
 			const { grid } = computeDistanceGrid({
 				width,
