@@ -4,11 +4,13 @@ import L from 'leaflet'
 import { hospitals } from '../data/mapData'
 import { HeatmapOverlay } from './HeatmapOverlay'
 
+const markerSize = 20
+
 export const Map = () => {
 	const icon = L.divIcon({
 		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;background:#1976d2;color:#fff;font-weight:bold;font-size:20px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">H</div>`,
-		iconAnchor: [16, 16]
+		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#1976d2;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">H</div>`,
+		iconAnchor: [markerSize / 2, markerSize / 2]
 	})
 
 	return (
