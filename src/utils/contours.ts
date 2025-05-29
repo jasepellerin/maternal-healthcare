@@ -1,4 +1,4 @@
-import { contours } from 'd3-contour'
+import {contours} from 'd3-contour'
 
 function haversine(lat1: number, lng1: number, lat2: number, lng2: number) {
 	const toRad = (d: number) => (d * Math.PI) / 180
@@ -27,10 +27,10 @@ function pointInPolygon([lng, lat]: [number, number], polygon: number[][][]) {
 	return inside
 }
 
-export function computeDistanceGrid({ width, height, map, polygon, hospitalList }) {
+export function computeDistanceGrid({width, height, map, polygon, hospitalList}) {
 	let min = Infinity,
 		max = -Infinity
-	const grid: (number | undefined)[][] = Array.from({ length: height }, () => Array(width))
+	const grid: (number | undefined)[][] = Array.from({length: height}, () => Array(width))
 	for (let y = 0; y < height; y++) {
 		for (let x = 0; x < width; x++) {
 			const latlng = map.containerPointToLatLng([x, y])
@@ -46,10 +46,10 @@ export function computeDistanceGrid({ width, height, map, polygon, hospitalList 
 			if (d > max) max = d
 		}
 	}
-	return { grid, min, max }
+	return {grid, min, max}
 }
 
-export function makeImageData({ grid, width, height, colorFn }) {
+export function makeImageData({grid, width, height, colorFn}) {
 	const img = new ImageData(width, height)
 	for (let y = 0; y < height; y++) {
 		for (let x = 0; x < width; x++) {
@@ -71,9 +71,7 @@ export function makeImageData({ grid, width, height, colorFn }) {
 
 export function drawContours(ctx, grid, width, height) {
 	const flat = grid.flat()
-	const contourGen = contours()
-		.size([width, height])
-		.thresholds([...Array(6)].map((_, i) => 10 * (i + 1)))
+	const contourGen = contours().size([width, height]).thresholds([15, 30, 45, 60, 75])
 	const contourPaths = contourGen(flat)
 	ctx.save()
 	ctx.lineWidth = 1

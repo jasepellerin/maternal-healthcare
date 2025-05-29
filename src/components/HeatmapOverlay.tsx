@@ -1,9 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import { scaleSequential } from 'd3-scale'
-import { interpolateYlOrRd } from 'd3-scale-chromatic'
-import { useMap } from 'react-leaflet'
-import { hospitals, oregonPolygon } from '../data/mapData'
-import { computeDistanceGrid, makeImageData, drawContours } from 'src/utils/contours'
+import {useEffect, useRef, useState} from 'react'
+import {useMap} from 'react-leaflet'
+import {hospitals, oregonPolygon} from '../data/mapData'
+import {computeDistanceGrid, makeImageData, drawContours} from 'src/utils/contours'
 
 export const HeatmapOverlay = () => {
 	const map = useMap()
@@ -25,14 +23,20 @@ export const HeatmapOverlay = () => {
 		const width = container.clientWidth
 		const height = container.clientHeight
 
-		const { grid, min, max } = computeDistanceGrid({
+		const {grid} = computeDistanceGrid({
 			width,
 			height,
 			map,
 			polygon: oregonPolygon,
 			hospitalList: hospitals
 		})
-		const color = scaleSequential(interpolateYlOrRd).domain([min, max])
+		const colorStops = [
+			{max: 15, color: [0, 100, 0, 242]}, // dark green
+			{max: 30, color: [102, 205, 102, 242]}, // light green
+			{max: 45, color: [255, 255, 0, 242]}, // yellow
+			{max: 60, color: [255, 165, 0, 242]}, // orange
+			{max: 75, color: [255, 0, 0, 242]} // red
+		]
 		const canvas = canvasRef.current
 		if (!canvas) return
 		const ctx = canvas.getContext('2d')!
@@ -43,12 +47,10 @@ export const HeatmapOverlay = () => {
 			width,
 			height,
 			colorFn: (d) => {
-				const rgba = color(color.domain()[0])
-				const m = rgba.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)
-				if (!m) return [0, 0, 0, 0]
-				const c = color(d)
-				const m2 = c.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/)
-				return [parseInt(m2[1]), parseInt(m2[2]), parseInt(m2[3]), Math.round(0.95 * 255)]
+				for (const stop of colorStops) {
+					if (d <= stop.max) return stop.color
+				}
+				return [255, 0, 0, 242] // red for >75
 			}
 		})
 		ctx.putImageData(img, 0, 0)
