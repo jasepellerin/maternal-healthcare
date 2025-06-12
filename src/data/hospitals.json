@@ -1,0 +1,626 @@
+[
+  {
+    "name": "ADVENTIST HEALTH COLUMBIA GORGE ",
+    "type": "hospital",
+    "position": [
+      45.587261,
+      -121.163631
+    ]
+  },
+  {
+    "name": "ADVENTIST HEALTH PORTLAND",
+    "type": "hospital",
+    "position": [
+      45.51287,
+      -122.556304
+    ]
+  },
+  {
+    "name": "ADVENTIST HEALTH TILLAMOOK ",
+    "type": "hospital",
+    "position": [
+      45.453333,
+      -123.838894
+    ]
+  },
+  {
+    "name": "ASANTE ASHLAND COMMUNITY HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      42.205398,
+      -122.724815
+    ]
+  },
+  {
+    "name": "ASANTE ROGUE REGIONAL MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      42.31804,
+      -122.83153
+    ]
+  },
+  {
+    "name": "ASANTE THREE RIVERS MEDICAL CENTER 500",
+    "type": "hospital",
+    "position": [
+      42.437005,
+      -123.328156
+    ]
+  },
+  {
+    "name": "BAY AREA HOSPITAL",
+    "type": "hospital",
+    "position": [
+      43.383671,
+      -124.232964
+    ]
+  },
+  {
+    "name": "BLUE MOUNTAIN HOSPITAL",
+    "type": "hospital",
+    "position": [
+      43.38312,
+      -124.232677
+    ]
+  },
+  {
+    "name": "CEDAR HILLS HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      44.41731,
+      -118.959569
+    ]
+  },
+  {
+    "name": "COLUMBIA MEMORIAL HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      45.505751,
+      -122.782895
+    ]
+  },
+  {
+    "name": "COQUILLE VALLEY HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      46.187774,
+      -123.81858
+    ]
+  },
+  {
+    "name": "CURRY GENERAL HOSPITAL",
+    "type": "hospital",
+    "position": [
+      43.179704,
+      -124.179765
+    ]
+  },
+  {
+    "name": "GOOD SAMARITAN REGIONAL MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      42.411346,
+      -124.418596
+    ]
+  },
+  {
+    "name": "GOOD SHEPHERD MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      44.602361,
+      -123.252776
+    ]
+  },
+  {
+    "name": "GRANDE RONDE HOSPITAL",
+    "type": "hospital",
+    "position": [
+      45.847974,
+      -119.308361
+    ]
+  },
+  {
+    "name": "HARNEY DISTRICT HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      45.319274,
+      -118.105835
+    ]
+  },
+  {
+    "name": "HILLSBORO MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      43.588449,
+      -119.061395
+    ]
+  },
+  {
+    "name": "KAISER FOUNDATION HOSPITAL",
+    "type": "hospital",
+    "position": [
+      45.519388,
+      -122.978199
+    ]
+  },
+  {
+    "name": "KAISER SUNNYSIDE MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.527845,
+      -122.957482
+    ]
+  },
+  {
+    "name": "LAKE DISTRICT HOSPITAL",
+    "type": "hospital",
+    "position": [
+      45.431674,
+      -122.560939
+    ]
+  },
+  {
+    "name": "LEGACY EMANUEL MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      42.181055,
+      -120.351962
+    ]
+  },
+  {
+    "name": "LEGACY GOOD SAMARITAN MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.544207,
+      -122.670094
+    ]
+  },
+  {
+    "name": "LEGACY MERIDIAN PARK MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.544163,
+      -122.726626
+    ]
+  },
+  {
+    "name": "LEGACY MOUNT HOOD MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.379648,
+      -122.742122
+    ]
+  },
+  {
+    "name": "LEGACY SILVERTON MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.517158,
+      -122.407496
+    ]
+  },
+  {
+    "name": "LOWER UMPQUA HOSPITAL DISTRICT",
+    "type": "hospital",
+    "position": [
+      45.003957,
+      -122.790594
+    ]
+  },
+  {
+    "name": "MCKENZIE-WILLAMETTE MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      43.694353,
+      -124.136498
+    ]
+  },
+  {
+    "name": "MERCY MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      44.052931,
+      -123.003278
+    ]
+  },
+  {
+    "name": "OHSU HOSPITAL AND CLINICS",
+    "type": "hospital",
+    "position": [
+      43.241282,
+      -123.36693
+    ]
+  },
+  {
+    "name": "OREGON STATE HOSPITAL DISTINCT PART ",
+    "type": "hospital",
+    "position": [
+      45.501118,
+      -122.685261
+    ]
+  },
+  {
+    "name": "OREGON STATE HOSPITAL JUNCTION CITY ",
+    "type": "hospital",
+    "position": [
+      44.938245,
+      -123.004274
+    ]
+  },
+  {
+    "name": "OREGON STATE HOSPITAL- SALEM",
+    "type": "hospital",
+    "position": [
+      44.1656,
+      -123.195302
+    ]
+  },
+  {
+    "name": "PEACE HARBOR MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      44.938245,
+      -123.004274
+    ]
+  },
+  {
+    "name": "PEACEHEALTH COTTAGE GROVE COMMUNITY MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      43.97318,
+      -124.117549
+    ]
+  },
+  {
+    "name": "PIONEER MEMORIAL HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      43.803726,
+      -123.039445
+    ]
+  },
+  {
+    "name": "PROVIDENCE HOOD RIVER MEMORIAL HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      45.355793,
+      -119.548608
+    ]
+  },
+  {
+    "name": "PROVIDENCE MEDFORD MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.704603,
+      -121.524155
+    ]
+  },
+  {
+    "name": "PROVIDENCE MILWAUKIE HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      42.339663,
+      -122.863166
+    ]
+  },
+  {
+    "name": "PROVIDENCE NEWBERG MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      45.449759,
+      -122.627767
+    ]
+  },
+  {
+    "name": "PROVIDENCE PORTLAND MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.308705,
+      -122.934947
+    ]
+  },
+  {
+    "name": "PROVIDENCE SEASIDE HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      45.528052,
+      -122.612101
+    ]
+  },
+  {
+    "name": "PROVIDENCE ST VINCENT MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      45.988835,
+      -123.912222
+    ]
+  },
+  {
+    "name": "PROVIDENCE WILLAMETTE FALLS MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      45.510582,
+      -122.77232
+    ]
+  },
+  {
+    "name": "SACRED HEART MEDICAL CENTER RIVERBEND",
+    "type": "hospital",
+    "position": [
+      45.356774,
+      -122.587578
+    ]
+  },
+  {
+    "name": "SAINT ALPHONSUS MEDICAL CENTER - BAKER CITY ",
+    "type": "hospital",
+    "position": [
+      44.080925,
+      -123.027327
+    ]
+  },
+  {
+    "name": "SAINT ALPHONSUS MEDICAL CENTER ONTARIO",
+    "type": "hospital",
+    "position": [
+      44.794789,
+      -117.847428
+    ]
+  },
+  {
+    "name": "SALEM HEALTH WEST VALLEY",
+    "type": "hospital",
+    "position": [
+      44.025339,
+      -116.976472
+    ]
+  },
+  {
+    "name": "SALEM HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      44.919033,
+      -123.30988
+    ]
+  },
+  {
+    "name": "SAMARITAN ALBANY GENERAL HOSPITAL",
+    "type": "hospital",
+    "position": [
+      44.932582,
+      -123.034132
+    ]
+  },
+  {
+    "name": "SAMARITAN LEBANON COMMUNITY HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      44.632155,
+      -123.11636
+    ]
+  },
+  {
+    "name": "SAMARITAN NORTH LINCOLN HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      44.550346,
+      -122.90662
+    ]
+  },
+  {
+    "name": "SAMARITAN PACIFIC COMMUNITY HOSPITAL",
+    "type": "hospital",
+    "position": [
+      44.985838,
+      -123.994103
+    ]
+  },
+  {
+    "name": "SANTIAM HOSPITAL & CLINICS",
+    "type": "hospital",
+    "position": [
+      44.628949,
+      -124.059086
+    ]
+  },
+  {
+    "name": "SHRINERS HOSPITAL FOR CHILDREN - PORTLAND ",
+    "type": "hospital",
+    "position": [
+      44.805217,
+      -122.785354
+    ]
+  },
+  {
+    "name": "SKY LAKES MEDICAL CENTER",
+    "type": "hospital",
+    "position": [
+      45.501118,
+      -122.685261
+    ]
+  },
+  {
+    "name": "SOUTHERN COOS HOSPITAL & HEALTH CENTER ",
+    "type": "hospital",
+    "position": [
+      42.252821,
+      -121.785319
+    ]
+  },
+  {
+    "name": "ST ANTHONY HOSPITAL",
+    "type": "hospital",
+    "position": [
+      43.112696,
+      -124.402379
+    ]
+  },
+  {
+    "name": "ST CHARLES BEND CAMPUS",
+    "type": "hospital",
+    "position": [
+      45.648409,
+      -118.812493
+    ]
+  },
+  {
+    "name": "ST CHARLES MADRAS ",
+    "type": "hospital",
+    "position": [
+      44.068257,
+      -121.269796
+    ]
+  },
+  {
+    "name": "ST CHARLES MEDICAL CENTER PRINEVILLE ",
+    "type": "hospital",
+    "position": [
+      44.637456,
+      -121.120002
+    ]
+  },
+  {
+    "name": "ST CHARLES REDMOND CAMPUS",
+    "type": "hospital",
+    "position": [
+      44.297546,
+      -120.825233
+    ]
+  },
+  {
+    "name": "SUTTER COAST HOSPITAL",
+    "type": "hospital",
+    "position": [
+      44.288199,
+      -121.1696
+    ]
+  },
+  {
+    "name": "VIBRA SPECIALTY HOSPITAL OF PORTLAND",
+    "type": "hospital",
+    "position": [
+      42.062375,
+      -124.288272
+    ]
+  },
+  {
+    "name": "WALLOWA MEMORIAL HOSPITAL ",
+    "type": "hospital",
+    "position": [
+      45.53549,
+      -122.557494
+    ]
+  },
+  {
+    "name": "WILLAMETTE VALLEY MEDICAL CENTER ",
+    "type": "hospital",
+    "position": [
+      45.432591,
+      -117.284779
+    ]
+  },
+  {
+    "name": "ALMA MIDWIFERY SERVICES, LLC",
+    "type": "birthing center",
+    "position": [
+      45.199494,
+      -123.165675
+    ]
+  },
+  {
+    "name": "ANDALUZ WATERBIRTH CENTER",
+    "type": "birthing center",
+    "position": [
+      45.521961,
+      -122.649242
+    ]
+  },
+  {
+    "name": "ASTORIA BIRTH CENTER AND FAMILY MEDICINE",
+    "type": "birthing center",
+    "position": [
+      45.498986,
+      -122.678224
+    ]
+  },
+  {
+    "name": "BELLA VIE GENTLE BIRTH CENTER",
+    "type": "birthing center",
+    "position": [
+      46.189498,
+      -123.828017
+    ]
+  },
+  {
+    "name": "BEND BIRTH CENTER",
+    "type": "birthing center",
+    "position": [
+      46.172653,
+      -123.838789
+    ]
+  },
+  {
+    "name": "CANYON MEDICAL CENTER",
+    "type": "birthing center",
+    "position": [
+      44.917382,
+      -123.031352
+    ]
+  },
+  {
+    "name": "CORVALLIS BIRTH CENTER ",
+    "type": "birthing center",
+    "position": [
+      44.032858,
+      -121.3062
+    ]
+  },
+  {
+    "name": "GROWING FAMILY BIRTH CENTER, LLC ",
+    "type": "birthing center",
+    "position": [
+      44.016271,
+      -121.314869
+    ]
+  },
+  {
+    "name": "KLAMATH BIRTH CENTER",
+    "type": "birthing center",
+    "position": [
+      44.007447,
+      -121.323008
+    ]
+  },
+  {
+    "name": "NOVA VIDA MIDWIVES FREE STANDING BIRTH CENTER ",
+    "type": "birthing center",
+    "position": [
+      45.505186,
+      -122.747305
+    ]
+  },
+  {
+    "name": "OREGON BIRTH AND WELLNESS CENTER ",
+    "type": "birthing center",
+    "position": [
+      44.577978,
+      -123.274047
+    ]
+  },
+  {
+    "name": "OUR COMMUNITY BIRTH CENTER ",
+    "type": "birthing center",
+    "position": [
+      44.537703,
+      -122.904672
+    ]
+  },
+  {
+    "name": "ROGUE BIRTH CENTER, LLC",
+    "type": "birthing center",
+    "position": [
+      44.503522,
+      -122.887866
+    ]
+  }
+]

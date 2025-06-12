@@ -22,8 +22,6 @@ export const HeatmapOverlay = () => {
 		setIsochrones(isochrone)
 	}, [])
 
-	console.log(isochrones)
-
 	useEffect(() => {
 		if (!isochrones) return
 		const canvas = canvasRef.current
@@ -51,14 +49,15 @@ export const HeatmapOverlay = () => {
 			ctx.save()
 			ctx.globalCompositeOperation = 'destination-over'
 			ctx.beginPath()
-			oregonPolygon.forEach((ring) => {
-				ring.forEach(([lng, lat], i) => {
-					const point = map.latLngToContainerPoint([lat, lng])
-					if (i === 0) ctx.moveTo(point.x, point.y)
-					else ctx.lineTo(point.x, point.y)
-				})
-				ctx.closePath()
+			oregonPolygon.forEach(([lng, lat], i) => {
+				const point = map.latLngToContainerPoint([lat, lng])
+				if (i === 0) {
+					ctx.moveTo(point.x, point.y)
+				} else {
+					ctx.lineTo(point.x, point.y)
+				}
 			})
+			ctx.closePath()
 			ctx.fillStyle = 'rgba(255,0,0,0.5)'
 			ctx.fill()
 			ctx.restore()
