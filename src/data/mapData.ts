@@ -2,7 +2,7 @@ import hospitalsData from './hospitals.json'
 
 export interface MapLocation {
 	name: string
-	type: 'hospital' | 'bc'
+	type: 'hospital' | 'birthing center' | 'home-access midwife'
 	position: [number, number]
 }
 
