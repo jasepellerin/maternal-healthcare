@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { useMap } from 'react-leaflet'
-import isochrone from '../data/hospitals_isochrone.json'
+import isochrone from '../data/hospitals_isochrones_merged.json'
 import L from 'leaflet'
 import { oregonPolygon } from '../data/mapData'
 import { HeatmapLegend } from './Legend'
+import { pointInPolygon } from '../utils/testing/contours'
 
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
@@ -61,6 +62,19 @@ export const HeatmapOverlay = () => {
 			ctx.fillStyle = 'rgba(255,0,0,0.5)'
 			ctx.fill()
 			ctx.restore()
+
+			// --- CLIP TO OREGON POLYGON ---
+			ctx.save()
+			ctx.beginPath()
+			oregonPolygon.forEach(([lng, lat], i) => {
+				const point = map.latLngToContainerPoint([lat, lng])
+				if (i === 0) ctx.moveTo(point.x, point.y)
+				else ctx.lineTo(point.x, point.y)
+			})
+			ctx.closePath()
+			ctx.clip()
+			// --- END CLIP ---
+
 			// Draw each isochrone polygon
 			const sortedFeatures = [...isochrones.features].sort(
 				(a, b) => b.properties.value - a.properties.value
@@ -92,6 +106,7 @@ export const HeatmapOverlay = () => {
 				ctx.fillStyle = `rgba(${color[0]},${color[1]},${color[2]},${color[3] / 255})`
 				ctx.fill()
 			}
+			ctx.restore()
 		}
 
 		draw()

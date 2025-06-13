@@ -9,7 +9,7 @@ export function haversine(lat1: number, lng1: number, lat2: number, lng2: number
 	return 2 * R * Math.asin(Math.sqrt(a))
 }
 
-function pointInPolygon([lng, lat]: [number, number], polygon: number[][][]) {
+export function pointInPolygon([lng, lat]: [number, number], polygon: number[][][]) {
 	let inside = false
 	for (const ring of polygon) {
 		for (let i = 0, j = ring.length - 1; i < ring.length; j = i++) {

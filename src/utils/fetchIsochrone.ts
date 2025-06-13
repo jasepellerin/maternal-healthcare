@@ -56,22 +56,45 @@ async function fetchIsochronesAllHospitals() {
 		'hospitals_isochrones_all_batches.geojson',
 		JSON.stringify(featureCollection(allFeatures), null, 2)
 	)
+}
 
-	// Merge by band
+const mergeIsochrones = () => {
+	const allFeatures = (
+		JSON.parse(
+			fs.readFileSync('hospitals_isochrones_all_batches.geojson', 'utf8')
+		) as GeoJSON.FeatureCollection<
+			GeoJSON.Polygon | GeoJSON.MultiPolygon,
+			GeoJSON.GeoJsonProperties
+		>
+	).features
+
 	const mergedFeatures = []
 	for (const band of colorStops) {
-		const bandFeatures = allFeatures.filter((f) => f.properties.value === band)
+		const bandFeatures = allFeatures.filter((f) => f.properties.value === band * 60)
 		if (bandFeatures.length === 0) continue
 		let merged = bandFeatures[0]
 		for (let i = 1; i < bandFeatures.length; i++) {
+			console.log('Merging feature', i, 'of', bandFeatures.length, 'for band', band)
 			try {
-				merged = union(merged, bandFeatures[i])
+				merged = union(featureCollection([merged, bandFeatures[i]]))
 			} catch (e) {
 				console.warn('Union error, skipping a feature:', e)
 			}
 		}
 		if (merged) {
-			merged.properties = { value: band }
+			merged.properties = { value: band * 60 }
+			const geom = merged.geometry as any
+			if (geom && geom.type === 'GeometryCollection' && Array.isArray(geom.geometries)) {
+				const polygons = geom.geometries.filter(
+					(g: any) => g.type === 'Polygon' || g.type === 'MultiPolygon'
+				)
+				merged.geometry = {
+					type: 'MultiPolygon',
+					coordinates: polygons.flatMap((g: any) =>
+						g.type === 'Polygon' ? [g.coordinates] : g.coordinates
+					)
+				}
+			}
 			mergedFeatures.push(merged)
 		}
 	}
@@ -83,3 +106,4 @@ async function fetchIsochronesAllHospitals() {
 }
 
 fetchIsochronesAllHospitals()
+// mergeIsochrones()
