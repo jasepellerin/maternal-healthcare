@@ -37,10 +37,12 @@ async function fetchIsochronesBatch(locations: [number, number][]) {
 	return await res.json()
 }
 
-async function fetchIsochronesAllHospitals() {
+async function fetchIsochronesAllHospitals(excludeRemovedLocations = false) {
 	const allFeatures: any[] = []
 	const locationChunks = chunk(
-		hospitals.map((h) => [h.position[1], h.position[0]]),
+		hospitals
+			.filter((h) => !excludeRemovedLocations || !h.willBeRemoved)
+			.map((h) => [h.position[1], h.position[0]]),
 		BATCH_SIZE
 	) as [number, number][][]
 	for (let i = 0; i < locationChunks.length; i++) {
@@ -105,5 +107,5 @@ const mergeIsochrones = () => {
 	console.log('Merged isochrones written to hospitals_isochrones_merged.geojson')
 }
 
-fetchIsochronesAllHospitals()
+fetchIsochronesAllHospitals(true)
 // mergeIsochrones()

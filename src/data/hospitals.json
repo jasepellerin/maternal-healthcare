@@ -394,6 +394,7 @@
   {
     "name": "SAMARITAN LEBANON COMMUNITY HOSPITAL ",
     "type": "hospital",
+    "willBeRemoved": true,
     "position": [
       44.632155,
       -123.11636
@@ -402,6 +403,7 @@
   {
     "name": "SAMARITAN NORTH LINCOLN HOSPITAL ",
     "type": "hospital",
+    "willBeRemoved": true,
     "position": [
       44.550346,
       -122.90662

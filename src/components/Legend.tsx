@@ -50,13 +50,14 @@ export const HeatmapLegend = () => (
 			position: 'absolute',
 			top: 20,
 			right: 20,
-			background: 'rgba(255,255,255,0.97)',
+			background: 'white',
 			padding: 18,
 			borderRadius: 12,
 			zIndex: 1000,
 			boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
 			border: '1px solid #ddd',
-			minWidth: 240
+			width: 280,
+			boxSizing: 'border-box'
 		}}
 	>
 		<div style={{ fontWeight: 700, fontSize: 18, marginBottom: 12 }}>Travel times (in minutes)</div>

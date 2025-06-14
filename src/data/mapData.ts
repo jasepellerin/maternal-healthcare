@@ -4,6 +4,7 @@ export interface MapLocation {
 	name: string
 	type: 'hospital' | 'birthing center' | 'home-access midwife'
 	position: [number, number]
+	willBeRemoved?: boolean
 }
 
 export const hospitals = hospitalsData as MapLocation[]

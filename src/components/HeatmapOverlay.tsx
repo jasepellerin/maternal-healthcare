@@ -1,10 +1,11 @@
 import { useEffect, useRef, useState } from 'react'
 import { useMap } from 'react-leaflet'
-import isochrone from '../data/hospitals_isochrones_merged.json'
+import isochrone from '../data/isochrones.json'
+import isochronesRemoved from '../data/isochrones_removed.json'
+
 import L from 'leaflet'
 import { oregonPolygon } from '../data/mapData'
 import { HeatmapLegend } from './Legend'
-import { pointInPolygon } from '../utils/testing/contours'
 
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
@@ -14,14 +15,18 @@ const colorStops = [
 	{ max: 75, color: [255, 0, 0, 242] }
 ]
 
-export const HeatmapOverlay = () => {
+export const HeatmapOverlay = ({
+	selectedIsochrones = 'all'
+}: {
+	selectedIsochrones: 'all' | 'removed'
+}) => {
 	const map = useMap()
 	const canvasRef = useRef<HTMLCanvasElement>(document.createElement('canvas'))
 	const [isochrones, setIsochrones] = useState<any>(null)
 
 	useEffect(() => {
-		setIsochrones(isochrone)
-	}, [])
+		setIsochrones(selectedIsochrones === 'all' ? isochrone : isochronesRemoved)
+	}, [selectedIsochrones])
 
 	useEffect(() => {
 		if (!isochrones) return
