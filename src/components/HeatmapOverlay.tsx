@@ -5,7 +5,6 @@ import isochronesRemoved from '../data/isochrones_removed.json'
 
 import L from 'leaflet'
 import { oregonPolygon } from '../data/mapData'
-import { HeatmapLegend } from './Legend'
 
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
@@ -140,5 +139,5 @@ export const HeatmapOverlay = ({
 		}
 	}, [map, isochrones])
 
-	return <HeatmapLegend />
+	return <></>
 }

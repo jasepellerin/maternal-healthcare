@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
 	{ max: 30, color: [102, 205, 102, 242] },
@@ -44,7 +46,18 @@ const IconSection = ({
 	</div>
 )
 
-export const HeatmapLegend = () => (
+export const HeatmapLegend = (popDensity) => {
+
+	const [swatchWidth, setSwatchWidth] = useState(22)
+	useEffect(()=>{ 
+		if (popDensity) { 
+			setSwatchWidth(200)
+		} else {
+			setSwatchWidth(22)
+		} 
+	},[popDensity])
+	console.log(swatchWidth, popDensity)
+	return (
 	<div
 		style={{
 			position: 'absolute',
@@ -65,9 +78,9 @@ export const HeatmapLegend = () => (
 			<div key={stop.max} style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
 				<div
 					style={{
-						width: 22,
+						width: swatchWidth,
 						height: 22,
-						background: `rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]},${stop.color[3] / 255})`,
+						background: `rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]}, .6)`,
 						marginRight: 12,
 						border: '1.5px solid #aaa',
 						borderRadius: 4
@@ -86,4 +99,4 @@ export const HeatmapLegend = () => (
 			<IconSection label="Home-Access Midwife" color="#43a047" iconLabel="M" />
 		</div>
 	</div>
-)
+)}
