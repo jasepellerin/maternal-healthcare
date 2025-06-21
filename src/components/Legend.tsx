@@ -1,3 +1,5 @@
+import { useEffect, useState } from "react";
+
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
 	{ max: 30, color: [102, 205, 102, 242] },
@@ -44,7 +46,37 @@ const IconSection = ({
 	</div>
 )
 
-export const HeatmapLegend = () => (
+export const HeatmapLegend = ({popDensity}:{popDensity: boolean}) => {
+
+	const [swatchBackground, setSwatchBackground] = useState("")
+	const overlayGradient = `linear-gradient(90deg, 
+		rgba(255, 255, 255, 0) 0%, 
+		rgba(255, 255, 255, 0) 10%, 
+		rgba(255, 255, 255, 0.5) 10%, 
+		rgba(255, 255, 255, 0.5) 20%, 
+		rgba(214, 214, 214, 0.5) 20%, 
+		rgba(214, 214, 214, 0.5) 30%, 
+		rgba(189, 189, 189, 0.5) 30%, 
+		rgba(189, 189, 189, 0.5) 40%, 
+		rgba(143, 143, 143, 0.5) 40%, 
+		rgba(143, 143, 143, 0.5) 50%, 
+		rgba(115, 115, 115, 0.5) 50%, 
+		rgba(115, 115, 115, 0.5) 60%, 
+		rgba(82, 82, 82, 0.5) 60%, 
+		rgba(82, 82, 82, 0.5) 70%, 
+		rgba(37, 37, 37, 0.5) 70%, 
+		rgba(37, 37, 37, 0.5) 80%, 
+		rgba(10, 10, 10, 0.5) 80%,
+		rgba(10, 10, 10, 0.5) 90%,
+		rgba(0, 0, 0, 0.5) 90%), `
+	useEffect(()=>{ 
+		if (popDensity) { 
+			setSwatchBackground(overlayGradient)
+		} else {
+			setSwatchBackground("")
+		} 
+	},[popDensity])
+	return (
 	<div
 		style={{
 			position: 'absolute',
@@ -65,12 +97,13 @@ export const HeatmapLegend = () => (
 			<div key={stop.max} style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
 				<div
 					style={{
-						width: 22,
+						width: popDensity ? 200 : 22,
 						height: 22,
-						background: `rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]},${stop.color[3] / 255})`,
+						background: `${swatchBackground}rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]}, .6)`,
 						marginRight: 12,
 						border: '1.5px solid #aaa',
-						borderRadius: 4
+						borderRadius: 4,
+						backgroundBlendMode: popDensity ? "saturation" : "normal"
 					}}
 				/>
 				<span style={{ fontSize: 15, minWidth: 90 }}>
@@ -78,6 +111,13 @@ export const HeatmapLegend = () => (
 				</span>
 			</div>
 		))}
+		{popDensity &&
+			<div style={{display: "flex", flexDirection: "row", width: 140, justifyContent: "space-between"}}>
+				<span>&larr;</span>
+				<span>Population Density</span>
+				<span>&rarr;</span>
+			</div>
+		}
 		<hr style={{ margin: '12px 0 10px 0', border: 0, borderTop: '1px solid #ccc' }} />
 
 		<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
@@ -86,4 +126,4 @@ export const HeatmapLegend = () => (
 			<IconSection label="Home-Access Midwife" color="#43a047" iconLabel="M" />
 		</div>
 	</div>
-)
+)}

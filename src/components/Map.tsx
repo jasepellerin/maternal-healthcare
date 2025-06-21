@@ -3,13 +3,15 @@ import 'leaflet/dist/leaflet.css'
 import L from 'leaflet'
 import { hospitals } from '../data/mapData'
 import { HeatmapOverlay } from './HeatmapOverlay'
+import { PopDensityOverlay } from './PopDensityOverlay'
+import { HeatmapLegend } from './Legend'
 import { useState } from 'react'
 
 const markerSize = 20
 
 export const Map = () => {
 	const [selectedIsochrones, setSelectedIsochrones] = useState<'all' | 'removed'>('all')
-
+	const [popDensityLayer, setPopDensityLayer] = useState(false)
 	const hospitalIcon = L.divIcon({
 		className: '',
 		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#1976d2;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">H</div>`,
@@ -36,10 +38,15 @@ export const Map = () => {
 				style={{ height: '800px', width: '100%' }}
 			>
 				<TileLayer
+					attribution='&copy; <a href="https://www.stadiamaps.com/" target="_blank">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/" target="_blank">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+					url="https://tiles.stadiamaps.com/tiles/alidade_smooth/{z}/{x}/{y}{r}.png"
+				/>
+				{/* <TileLayer
 					attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors"
 					url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-				/>
+				/> */}
 				<HeatmapOverlay selectedIsochrones={selectedIsochrones} />
+				{popDensityLayer && <PopDensityOverlay />}
 				{hospitals
 					.filter((h) => selectedIsochrones === 'all' || !h.willBeRemoved)
 					.map((h) => {
@@ -54,7 +61,9 @@ export const Map = () => {
 								<Popup>{h.name}</Popup>
 							</Marker>
 						)
-					})}
+					})
+				}
+				<HeatmapLegend popDensity={popDensityLayer} />
 			</MapContainer>
 			<div style={{ display: 'flex', justifyContent: 'center' }}>
 				<button
@@ -74,6 +83,24 @@ export const Map = () => {
 					}}
 				>
 					{selectedIsochrones === 'all' ? 'Show without at-risk locations' : 'Show all locations'}
+				</button>
+				<button
+					onClick={() =>
+						setPopDensityLayer(current => !current)
+					}
+					style={{
+						background: 'rgba(219, 219, 219, 0.97)',
+						border: 'none',
+						padding: 12,
+						borderRadius: 4,
+						boxShadow: '0 1px 4px rgba(0,0,0,0.3)',
+						cursor: 'pointer',
+						fontSize: 14,
+						fontWeight: 800,
+						color: '#333'
+					}}
+				>
+					{popDensityLayer ? 'Hide Population Density Layer' : 'Show Population Density Layer'}
 				</button>
 			</div>
 		</div>
