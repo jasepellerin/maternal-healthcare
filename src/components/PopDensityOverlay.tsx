@@ -65,7 +65,8 @@ export const PopDensityOverlay = () => {
 				const polys = feature.geometry.type === 'MultiPolygon' ? coords : [coords]
 				for (const poly of polys) {
 					for (const ring of poly) {
-						;(ring as GeoJSON.Position[]).forEach(([lng, lat], i) => {
+						const ringArray = ring as GeoJSON.Position[]
+						ringArray.forEach(([lng, lat], i) => {
 							const point = map.latLngToContainerPoint([lat, lng])
 							if (i === 0) ctx.moveTo(point.x, point.y)
 							else ctx.lineTo(point.x, point.y)
