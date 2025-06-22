@@ -61,8 +61,7 @@ export const Map = () => {
 								<Popup>{h.name}</Popup>
 							</Marker>
 						)
-					})
-				}
+					})}
 				<HeatmapLegend popDensity={popDensityLayer} />
 			</MapContainer>
 			<div style={{ display: 'flex', justifyContent: 'center' }}>
@@ -85,9 +84,7 @@ export const Map = () => {
 					{selectedIsochrones === 'all' ? 'Show without at-risk locations' : 'Show all locations'}
 				</button>
 				<button
-					onClick={() =>
-						setPopDensityLayer(current => !current)
-					}
+					onClick={() => setPopDensityLayer((current) => !current)}
 					style={{
 						background: 'rgba(219, 219, 219, 0.97)',
 						border: 'none',

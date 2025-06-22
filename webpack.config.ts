@@ -42,7 +42,11 @@ const webpackConfig = (env): webpack.Configuration => ({
 			'process.env.NAME': JSON.stringify(packageJson.name),
 			'process.env.VERSION': JSON.stringify(packageJson.version)
 		}),
-		new ForkTsCheckerWebpackPlugin(),
+		new ForkTsCheckerWebpackPlugin({
+			typescript: {
+				memoryLimit: 4096
+			}
+		}),
 		new ESLintPlugin({ files: './src/**/*.{ts,tsx,js,jsx}', emitWarning: false })
 	]
 })

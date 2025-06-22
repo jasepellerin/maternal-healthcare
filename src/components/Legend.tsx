@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react'
 
 const colorStops = [
 	{ max: 15, color: [0, 100, 0, 242] },
@@ -46,9 +46,8 @@ const IconSection = ({
 	</div>
 )
 
-export const HeatmapLegend = ({popDensity}:{popDensity: boolean}) => {
-
-	const [swatchBackground, setSwatchBackground] = useState("")
+export const HeatmapLegend = ({ popDensity }: { popDensity: boolean }) => {
+	const [swatchBackground, setSwatchBackground] = useState('')
 	const overlayGradient = `linear-gradient(90deg, 
 		rgba(255, 255, 255, 0) 0%, 
 		rgba(255, 255, 255, 0) 10%, 
@@ -69,61 +68,72 @@ export const HeatmapLegend = ({popDensity}:{popDensity: boolean}) => {
 		rgba(10, 10, 10, 0.5) 80%,
 		rgba(10, 10, 10, 0.5) 90%,
 		rgba(0, 0, 0, 0.5) 90%), `
-	useEffect(()=>{ 
-		if (popDensity) { 
+	useEffect(() => {
+		if (popDensity) {
 			setSwatchBackground(overlayGradient)
 		} else {
-			setSwatchBackground("")
-		} 
-	},[popDensity])
+			setSwatchBackground('')
+		}
+	}, [overlayGradient, popDensity])
+
 	return (
-	<div
-		style={{
-			position: 'absolute',
-			top: 20,
-			right: 20,
-			background: 'white',
-			padding: 18,
-			borderRadius: 12,
-			zIndex: 1000,
-			boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
-			border: '1px solid #ddd',
-			width: 280,
-			boxSizing: 'border-box'
-		}}
-	>
-		<div style={{ fontWeight: 700, fontSize: 18, marginBottom: 12 }}>Travel times (in minutes)</div>
-		{colorStops.map((stop, i) => (
-			<div key={stop.max} style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
+		<div
+			style={{
+				position: 'absolute',
+				top: 20,
+				right: 20,
+				background: 'white',
+				padding: 18,
+				borderRadius: 12,
+				zIndex: 1000,
+				boxShadow: '0 4px 16px rgba(0,0,0,0.18)',
+				border: '1px solid #ddd',
+				width: 280,
+				boxSizing: 'border-box'
+			}}
+		>
+			<div style={{ fontWeight: 700, fontSize: 18, marginBottom: 12 }}>
+				Travel times (in minutes)
+			</div>
+			{colorStops.map((stop, i) => (
+				<div key={stop.max} style={{ display: 'flex', alignItems: 'center', marginBottom: 6 }}>
+					<div
+						style={{
+							width: popDensity ? 200 : 22,
+							height: 22,
+							background: `${swatchBackground}rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]}, .6)`,
+							marginRight: 12,
+							border: '1.5px solid #aaa',
+							borderRadius: 4,
+							backgroundBlendMode: popDensity ? 'saturation' : 'normal'
+						}}
+					/>
+					<span style={{ fontSize: 15, minWidth: 90 }}>
+						{i === 0 ? 0 : colorStops[i - 1].max}–{stop.max} min
+					</span>
+				</div>
+			))}
+			{popDensity && (
 				<div
 					style={{
-						width: popDensity ? 200 : 22,
-						height: 22,
-						background: `${swatchBackground}rgba(${stop.color[0]},${stop.color[1]},${stop.color[2]}, .6)`,
-						marginRight: 12,
-						border: '1.5px solid #aaa',
-						borderRadius: 4,
-						backgroundBlendMode: popDensity ? "saturation" : "normal"
+						display: 'flex',
+						flexDirection: 'row',
+						width: 140,
+						justifyContent: 'space-between'
 					}}
-				/>
-				<span style={{ fontSize: 15, minWidth: 90 }}>
-					{i === 0 ? 0 : colorStops[i - 1].max}–{stop.max} min
-				</span>
-			</div>
-		))}
-		{popDensity &&
-			<div style={{display: "flex", flexDirection: "row", width: 140, justifyContent: "space-between"}}>
-				<span>&larr;</span>
-				<span>Population Density</span>
-				<span>&rarr;</span>
-			</div>
-		}
-		<hr style={{ margin: '12px 0 10px 0', border: 0, borderTop: '1px solid #ccc' }} />
+				>
+					<span>&larr;</span>
+					<span>Population Density</span>
+					<span>&rarr;</span>
+				</div>
+			)}
+			<hr style={{ margin: '12px 0 10px 0', border: 0, borderTop: '1px solid #ccc' }} />
 
-		<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
-			<IconSection label="Hospital" color="#1976d2" iconLabel="H" />
-			<IconSection label="Birth Center" color="#00bcd4" iconLabel="B" />
-			<IconSection label="Home-Access Midwife" color="#43a047" iconLabel="M" />
+			<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
+				<IconSection label="Hospital" color="#1976d2" iconLabel="H" />
+				<IconSection label="Birth Center" color="#00bcd4" iconLabel="B" />
+				<IconSection label="Home-Access Midwife" color="#43a047" iconLabel="M" />
+			</div>
 		</div>
-	</div>
-)}
+	)
+}
