@@ -1,6 +1,6 @@
 import { MapLocation } from 'src/data/mapData'
 import fs from 'fs'
-import rawData from '../data/facilities_w_props.json'
+import rawData from '../../data/old/facilities_w_props.json'
 
 export const getMapLocations = (
 	data: GeoJSON.FeatureCollection<GeoJSON.Point, GeoJSON.GeoJsonProperties>
