@@ -7,7 +7,7 @@ export interface MapLocation {
 	willBeRemoved?: boolean
 }
 
-export const hospitals = hospitalsData as MapLocation[]
+export const hospitals = hospitalsData as unknown as MapLocation[]
 
 // Oregon boundary (simplified, low-res, [lng, lat])
 export const oregonPolygon = [

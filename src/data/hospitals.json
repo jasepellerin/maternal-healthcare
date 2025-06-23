@@ -1,6 +1,11 @@
 [
   {
     "name": "ADVENTIST HEALTH COLUMBIA GORGE ",
+    "address": "1700 E 19TH STREET",
+    "City": "THE DALLES",
+    "state": "OR",
+    "postcode": "97058",
+    "county license expiry license": "WASCO 12/31/25 14-0500",
     "type": "hospital",
     "position": [
       45.587261,
@@ -9,6 +14,11 @@
   },
   {
     "name": "ADVENTIST HEALTH PORTLAND",
+    "address": "10123 SE MARKET STREET",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97216",
+    "county license expiry license": "MULTNOMAH 12/31/25 14-1127",
     "type": "hospital",
     "position": [
       45.51287,
@@ -17,6 +27,11 @@
   },
   {
     "name": "ADVENTIST HEALTH TILLAMOOK ",
+    "address": "1000 THIRD STREET",
+    "City": "TILLAMOOK",
+    "state": "OR",
+    "postcode": "97141",
+    "county license expiry license": " TILLAMOOK 12/31/25 14-1177",
     "type": "hospital",
     "position": [
       45.453333,
@@ -25,6 +40,11 @@
   },
   {
     "name": "ASANTE ASHLAND COMMUNITY HOSPITAL ",
+    "address": "280 MAPLE STREET",
+    "City": "ASHLAND",
+    "state": "OR",
+    "postcode": "97520",
+    "county license expiry license": " JACKSON 12/31/25 14-1445",
     "type": "hospital",
     "position": [
       42.205398,
@@ -33,6 +53,11 @@
   },
   {
     "name": "ASANTE ROGUE REGIONAL MEDICAL CENTER ",
+    "address": "2825 E BARNETT ROAD",
+    "City": "MEDFORD",
+    "state": "OR",
+    "postcode": "97504",
+    "county license expiry license": "JACKSON 12/31/25 14-0451",
     "type": "hospital",
     "position": [
       42.31804,
@@ -41,6 +66,11 @@
   },
   {
     "name": "ASANTE THREE RIVERS MEDICAL CENTER 500",
+    "address": "SW RAMSEY AVENUE",
+    "City": "GRANTS PASS",
+    "state": "OR",
+    "postcode": "97527",
+    "county license expiry license": " JOSEPHINE 12/31/25 14-1439",
     "type": "hospital",
     "position": [
       42.437005,
@@ -49,22 +79,24 @@
   },
   {
     "name": "BAY AREA HOSPITAL",
+    "address": "1775 THOMPSON ROAD",
+    "City": "COOS BAY",
+    "state": "OR",
+    "postcode": "97420",
+    "county license expiry license": "COOS 12/31/25 14-1024",
     "type": "hospital",
     "position": [
-      43.383671,
-      -124.232964
+      43.3836049,
+      -124.23557
     ]
   },
   {
     "name": "BLUE MOUNTAIN HOSPITAL",
-    "type": "hospital",
-    "position": [
-      43.38312,
-      -124.232677
-    ]
-  },
-  {
-    "name": "CEDAR HILLS HOSPITAL ",
+    "address": "170 FORD ROAD",
+    "City": "JOHN DAY",
+    "state": "OR",
+    "postcode": "97845",
+    "county license expiry license": "GRANT 12/31/25 14-0703",
     "type": "hospital",
     "position": [
       44.41731,
@@ -72,7 +104,12 @@
     ]
   },
   {
-    "name": "COLUMBIA MEMORIAL HOSPITAL ",
+    "name": "CEDAR HILLS HOSPITAL ",
+    "address": "10300 SW EASTRIDGE STREET",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97225",
+    "county license expiry license": " WASHINGTON 12/31/25 14-1468",
     "type": "hospital",
     "position": [
       45.505751,
@@ -80,7 +117,12 @@
     ]
   },
   {
-    "name": "COQUILLE VALLEY HOSPITAL ",
+    "name": "COLUMBIA MEMORIAL HOSPITAL ",
+    "address": "2111 EXCHANGE STREET",
+    "City": "ASTORIA",
+    "state": "OR",
+    "postcode": "97103",
+    "county license expiry license": " CLATSOP 12/31/25 14-1146",
     "type": "hospital",
     "position": [
       46.187774,
@@ -88,7 +130,12 @@
     ]
   },
   {
-    "name": "CURRY GENERAL HOSPITAL",
+    "name": "COQUILLE VALLEY HOSPITAL ",
+    "address": "940 EAST 5TH STREET",
+    "City": "COQUILLE",
+    "state": "OR",
+    "postcode": "97423",
+    "county license expiry license": " COOS 12/31/25 14-0875",
     "type": "hospital",
     "position": [
       43.179704,
@@ -96,7 +143,12 @@
     ]
   },
   {
-    "name": "GOOD SAMARITAN REGIONAL MEDICAL CENTER",
+    "name": "CURRY GENERAL HOSPITAL",
+    "address": "94220 FOURTH STREET",
+    "City": "GOLD BEACH",
+    "state": "OR",
+    "postcode": "97444",
+    "county license expiry license": " CURRY 12/31/25 14-0251",
     "type": "hospital",
     "position": [
       42.411346,
@@ -104,7 +156,12 @@
     ]
   },
   {
-    "name": "GOOD SHEPHERD MEDICAL CENTER ",
+    "name": "GOOD SAMARITAN REGIONAL MEDICAL CENTER",
+    "address": "3600 NW SAMARITAN DRIVE",
+    "City": "CORVALLIS",
+    "state": "OR",
+    "postcode": "97330",
+    "county license expiry license": " BENTON 12/31/25 14-1074",
     "type": "hospital",
     "position": [
       44.602361,
@@ -112,7 +169,12 @@
     ]
   },
   {
-    "name": "GRANDE RONDE HOSPITAL",
+    "name": "GOOD SHEPHERD MEDICAL CENTER ",
+    "address": "610 NW 11TH STREET",
+    "City": "HERMISTON",
+    "state": "OR",
+    "postcode": "97838",
+    "county license expiry license": " UMATILLA 12/31/25 14-0334",
     "type": "hospital",
     "position": [
       45.847974,
@@ -120,7 +182,12 @@
     ]
   },
   {
-    "name": "HARNEY DISTRICT HOSPITAL ",
+    "name": "GRANDE RONDE HOSPITAL",
+    "address": "900 SUNSET DRIVE",
+    "City": "LA GRANDE",
+    "state": "OR",
+    "postcode": "97850",
+    "county license expiry license": "UNION 12/31/25 14-0728",
     "type": "hospital",
     "position": [
       45.319274,
@@ -128,7 +195,12 @@
     ]
   },
   {
-    "name": "HILLSBORO MEDICAL CENTER ",
+    "name": "HARNEY DISTRICT HOSPITAL ",
+    "address": "557 W WASHINGTON STREET",
+    "City": "BURNS",
+    "state": "OR",
+    "postcode": "97720",
+    "county license expiry license": " HARNEY 12/31/25 14-0704",
     "type": "hospital",
     "position": [
       43.588449,
@@ -136,7 +208,12 @@
     ]
   },
   {
-    "name": "KAISER FOUNDATION HOSPITAL",
+    "name": "HILLSBORO MEDICAL CENTER ",
+    "address": "335 SE 8TH AVENUE",
+    "City": "HILLSBORO",
+    "state": "OR",
+    "postcode": "97123",
+    "county license expiry license": " WASHINGTON 12/31/25 14-0095",
     "type": "hospital",
     "position": [
       45.519388,
@@ -144,7 +221,12 @@
     ]
   },
   {
-    "name": "KAISER SUNNYSIDE MEDICAL CENTER",
+    "name": "KAISER FOUNDATION HOSPITAL",
+    "address": "WESTSIDE 2875 NE STUCKI AVE",
+    "City": "HILLSBORO",
+    "state": "OR",
+    "postcode": "97124",
+    "county license expiry license": " WASHINGTON 12/31/25 14-1472",
     "type": "hospital",
     "position": [
       45.527845,
@@ -152,7 +234,12 @@
     ]
   },
   {
-    "name": "LAKE DISTRICT HOSPITAL",
+    "name": "KAISER SUNNYSIDE MEDICAL CENTER",
+    "address": "10180 SE SUNNYSIDE ROAD",
+    "City": "CLACKAMAS",
+    "state": "OR",
+    "postcode": "97015",
+    "county license expiry license": " CLACKAMAS 12/31/25 14-1073",
     "type": "hospital",
     "position": [
       45.431674,
@@ -160,7 +247,12 @@
     ]
   },
   {
-    "name": "LEGACY EMANUEL MEDICAL CENTER",
+    "name": "LAKE DISTRICT HOSPITAL",
+    "address": "700 SOUTH J STREET",
+    "City": "LAKEVIEW",
+    "state": "OR",
+    "postcode": "97630",
+    "county license expiry license": " LAKE 12/31/25 14-0896",
     "type": "hospital",
     "position": [
       42.181055,
@@ -168,7 +260,12 @@
     ]
   },
   {
-    "name": "LEGACY GOOD SAMARITAN MEDICAL CENTER",
+    "name": "LEGACY EMANUEL MEDICAL CENTER",
+    "address": "2801 N GANTENBEIN AVENUE",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97227",
+    "county license expiry license": " MULTNOMAH 12/31/25 14-0056",
     "type": "hospital",
     "position": [
       45.544207,
@@ -176,7 +273,12 @@
     ]
   },
   {
-    "name": "LEGACY MERIDIAN PARK MEDICAL CENTER",
+    "name": "LEGACY GOOD SAMARITAN MEDICAL CENTER",
+    "address": "1015 NW 22ND AVENUE, W121",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97210",
+    "county license expiry license": " MULTNOMAH 12/31/25 14-0027",
     "type": "hospital",
     "position": [
       45.544163,
@@ -184,7 +286,12 @@
     ]
   },
   {
-    "name": "LEGACY MOUNT HOOD MEDICAL CENTER",
+    "name": "LEGACY MERIDIAN PARK MEDICAL CENTER",
+    "address": "19300 SW 65TH AVENUE",
+    "City": "TUALATIN",
+    "state": "OR",
+    "postcode": "97062",
+    "county license expiry license": " WASHINGTON 12/31/25 14-1336",
     "type": "hospital",
     "position": [
       45.379648,
@@ -192,7 +299,12 @@
     ]
   },
   {
-    "name": "LEGACY SILVERTON MEDICAL CENTER",
+    "name": "LEGACY MOUNT HOOD MEDICAL CENTER",
+    "address": "24800 SE STARK STREET",
+    "City": "GRESHAM",
+    "state": "OR",
+    "postcode": "97030",
+    "county license expiry license": " MULTNOMAH 12/31/25 14-1337",
     "type": "hospital",
     "position": [
       45.517158,
@@ -200,7 +312,12 @@
     ]
   },
   {
-    "name": "LOWER UMPQUA HOSPITAL DISTRICT",
+    "name": "LEGACY SILVERTON MEDICAL CENTER",
+    "address": "342 FAIRVIEW STREET",
+    "City": "SILVERTON",
+    "state": "OR",
+    "postcode": "97381",
+    "county license expiry license": " MARION 12/31/25 14-0030",
     "type": "hospital",
     "position": [
       45.003957,
@@ -208,7 +325,12 @@
     ]
   },
   {
-    "name": "MCKENZIE-WILLAMETTE MEDICAL CENTER",
+    "name": "LOWER UMPQUA HOSPITAL DISTRICT",
+    "address": "600 RANCH ROAD",
+    "City": "REEDSPORT",
+    "state": "OR",
+    "postcode": "97467",
+    "county license expiry license": " DOUGLAS 12/31/25 14-0639",
     "type": "hospital",
     "position": [
       43.694353,
@@ -216,7 +338,12 @@
     ]
   },
   {
-    "name": "MERCY MEDICAL CENTER",
+    "name": "MCKENZIE-WILLAMETTE MEDICAL CENTER",
+    "address": "1460 G STREET",
+    "City": "SPRINGFIELD",
+    "state": "OR",
+    "postcode": "97477",
+    "county license expiry license": " LANE 12/31/25 14-0701",
     "type": "hospital",
     "position": [
       44.052931,
@@ -224,7 +351,12 @@
     ]
   },
   {
-    "name": "OHSU HOSPITAL AND CLINICS",
+    "name": "MERCY MEDICAL CENTER",
+    "address": "2700 NW STEWART PARKWAY",
+    "City": "ROSEBURG",
+    "state": "OR",
+    "postcode": "97471",
+    "county license expiry license": " DOUGLAS 12/31/25 14-1133",
     "type": "hospital",
     "position": [
       43.241282,
@@ -232,7 +364,12 @@
     ]
   },
   {
-    "name": "OREGON STATE HOSPITAL DISTINCT PART ",
+    "name": "OHSU HOSPITAL AND CLINICS",
+    "address": "3181 SW SAM JACKSON PARK ROAD",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97239",
+    "county license expiry license": "MULTNOMAH 12/31/25 14-1008",
     "type": "hospital",
     "position": [
       45.501118,
@@ -240,7 +377,12 @@
     ]
   },
   {
-    "name": "OREGON STATE HOSPITAL JUNCTION CITY ",
+    "name": "OREGON STATE HOSPITAL DISTINCT PART ",
+    "address": "2600 CENTER STREET NE",
+    "City": "SALEM",
+    "state": "OR",
+    "postcode": "97301",
+    "county license expiry license": "MARION 12/31/25 14-0160",
     "type": "hospital",
     "position": [
       44.938245,
@@ -248,7 +390,12 @@
     ]
   },
   {
-    "name": "OREGON STATE HOSPITAL- SALEM",
+    "name": "OREGON STATE HOSPITAL JUNCTION CITY ",
+    "address": "29398 RECOVERY WAY",
+    "City": "JUNCTION CITY",
+    "state": "OR",
+    "postcode": "97448",
+    "county license expiry license": " LANE 12/31/25 14-1474",
     "type": "hospital",
     "position": [
       44.1656,
@@ -256,7 +403,12 @@
     ]
   },
   {
-    "name": "PEACE HARBOR MEDICAL CENTER",
+    "name": "OREGON STATE HOSPITAL- SALEM",
+    "address": "2600 CENTER STREET NE",
+    "City": "SALEM",
+    "state": "OR",
+    "postcode": "97301",
+    "county license expiry license": " MARION 12/31/15 14-0160",
     "type": "hospital",
     "position": [
       44.938245,
@@ -264,7 +416,12 @@
     ]
   },
   {
-    "name": "PEACEHEALTH COTTAGE GROVE COMMUNITY MEDICAL CENTER ",
+    "name": "PEACE HARBOR MEDICAL CENTER",
+    "address": "400 9TH STREET",
+    "City": "FLORENCE",
+    "state": "OR",
+    "postcode": "97439",
+    "county license expiry license": " LANE 12/31/25 14-0711",
     "type": "hospital",
     "position": [
       43.97318,
@@ -272,7 +429,12 @@
     ]
   },
   {
-    "name": "PIONEER MEMORIAL HOSPITAL ",
+    "name": "PEACEHEALTH COTTAGE GROVE COMMUNITY MEDICAL CENTER ",
+    "address": "1515 VILLAGE DRIVE",
+    "City": "COTTAGE GROVE",
+    "state": "OR",
+    "postcode": "97424",
+    "county license expiry license": " LANE 12/31/25 40-0223",
     "type": "hospital",
     "position": [
       43.803726,
@@ -280,7 +442,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE HOOD RIVER MEMORIAL HOSPITAL ",
+    "name": "PIONEER MEMORIAL HOSPITAL ",
+    "address": "564 E PIONEER DRIVE",
+    "City": "HEPPNER",
+    "state": "OR",
+    "postcode": "97836",
+    "county license expiry license": "MORROW 12/31/25 14-1444",
     "type": "hospital",
     "position": [
       45.355793,
@@ -288,7 +455,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE MEDFORD MEDICAL CENTER",
+    "name": "PROVIDENCE HOOD RIVER MEMORIAL HOSPITAL ",
+    "address": "810 12TH STREET",
+    "City": "HOOD RIVER",
+    "state": "OR",
+    "postcode": "97031",
+    "county license expiry license": " HOOD RIVER 12/31/25 14-1452",
     "type": "hospital",
     "position": [
       45.704603,
@@ -296,7 +468,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE MILWAUKIE HOSPITAL ",
+    "name": "PROVIDENCE MEDFORD MEDICAL CENTER",
+    "address": "1111 CRATER LAKE AVENUE",
+    "City": "MEDFORD",
+    "state": "OR",
+    "postcode": "97504",
+    "county license expiry license": " JACKSON 12/31/25 14-0734",
     "type": "hospital",
     "position": [
       42.339663,
@@ -304,7 +481,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE NEWBERG MEDICAL CENTER ",
+    "name": "PROVIDENCE MILWAUKIE HOSPITAL ",
+    "address": "10150 SE 32ND AVENUE",
+    "City": "MILWAUKIE",
+    "state": "OR",
+    "postcode": "97222",
+    "county license expiry license": "CLACKAMAS 12/31/25 14-1430",
     "type": "hospital",
     "position": [
       45.449759,
@@ -312,7 +494,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE PORTLAND MEDICAL CENTER",
+    "name": "PROVIDENCE NEWBERG MEDICAL CENTER ",
+    "address": "1001 PROVIDENCE DRIVE",
+    "City": "NEWBERG",
+    "state": "OR",
+    "postcode": "97132",
+    "county license expiry license": "YAMHILL 12/31/25 14-1438",
     "type": "hospital",
     "position": [
       45.308705,
@@ -320,7 +507,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE SEASIDE HOSPITAL ",
+    "name": "PROVIDENCE PORTLAND MEDICAL CENTER",
+    "address": "4805 NE GLISAN STREET",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97213",
+    "county license expiry license": " MULTNOMAH 12/31/25 14-0012",
     "type": "hospital",
     "position": [
       45.528052,
@@ -328,7 +520,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE ST VINCENT MEDICAL CENTER ",
+    "name": "PROVIDENCE SEASIDE HOSPITAL ",
+    "address": "725 S WAHANNA ROAD",
+    "City": "SEASIDE",
+    "state": "OR",
+    "postcode": "97138",
+    "county license expiry license": "CLATSOP 12/31/25 14-1231",
     "type": "hospital",
     "position": [
       45.988835,
@@ -336,7 +533,12 @@
     ]
   },
   {
-    "name": "PROVIDENCE WILLAMETTE FALLS MEDICAL CENTER ",
+    "name": "PROVIDENCE ST VINCENT MEDICAL CENTER ",
+    "address": "9205 SW BARNES ROAD",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97225",
+    "county license expiry license": "WASHINGTON 12/31/25 14-0912",
     "type": "hospital",
     "position": [
       45.510582,
@@ -344,7 +546,12 @@
     ]
   },
   {
-    "name": "SACRED HEART MEDICAL CENTER RIVERBEND",
+    "name": "PROVIDENCE WILLAMETTE FALLS MEDICAL CENTER ",
+    "address": "1500 DIVISION STREET",
+    "City": "OREGON CITY",
+    "state": "OR",
+    "postcode": "97045",
+    "county license expiry license": "CLACKAMAS 12/31/25 14-1471",
     "type": "hospital",
     "position": [
       45.356774,
@@ -352,7 +559,12 @@
     ]
   },
   {
-    "name": "SAINT ALPHONSUS MEDICAL CENTER - BAKER CITY ",
+    "name": "SACRED HEART MEDICAL CENTER RIVERBEND",
+    "address": " 3333 RIVERBEND DRIVE",
+    "City": "SPRINGFIELD",
+    "state": "OR",
+    "postcode": "97477",
+    "county license expiry license": "LANE 12/31/25 14-0014",
     "type": "hospital",
     "position": [
       44.080925,
@@ -360,7 +572,12 @@
     ]
   },
   {
-    "name": "SAINT ALPHONSUS MEDICAL CENTER ONTARIO",
+    "name": "SAINT ALPHONSUS MEDICAL CENTER - BAKER CITY ",
+    "address": "3325 POCAHONTAS ROAD",
+    "City": "BAKER CITY",
+    "state": "OR",
+    "postcode": "97814",
+    "county license expiry license": " BAKER 12/31/25 14-1469",
     "type": "hospital",
     "position": [
       44.794789,
@@ -368,7 +585,12 @@
     ]
   },
   {
-    "name": "SALEM HEALTH WEST VALLEY",
+    "name": "SAINT ALPHONSUS MEDICAL CENTER ONTARIO",
+    "address": "351 SW 9TH STREET",
+    "City": "ONTARIO",
+    "state": "OR",
+    "postcode": "97914",
+    "county license expiry license": " MALHEUR 12/31/25 14-1470",
     "type": "hospital",
     "position": [
       44.025339,
@@ -376,7 +598,12 @@
     ]
   },
   {
-    "name": "SALEM HOSPITAL ",
+    "name": "SALEM HEALTH WEST VALLEY",
+    "address": "525 SE WASHINGTON STREET",
+    "City": "DALLAS",
+    "state": "OR",
+    "postcode": "97338",
+    "county license expiry license": "POLK 12/31/25 14-1461",
     "type": "hospital",
     "position": [
       44.919033,
@@ -384,7 +611,12 @@
     ]
   },
   {
-    "name": "SAMARITAN ALBANY GENERAL HOSPITAL",
+    "name": "SALEM HOSPITAL ",
+    "address": "890 OAK STREET, SE",
+    "City": "SALEM",
+    "state": "OR",
+    "postcode": "97301",
+    "county license expiry license": "MARION 12/31/25 14-1428",
     "type": "hospital",
     "position": [
       44.932582,
@@ -392,16 +624,25 @@
     ]
   },
   {
-    "name": "SAMARITAN LEBANON COMMUNITY HOSPITAL ",
+    "name": "SAMARITAN ALBANY GENERAL HOSPITAL",
+    "address": "1046 6TH AVENUE SW",
+    "City": "ALBANY",
+    "state": "OR",
+    "postcode": "97321",
+    "county license expiry license": " LINN 12/31/25 14-1459",
     "type": "hospital",
-    "willBeRemoved": true,
     "position": [
       44.632155,
       -123.11636
     ]
   },
   {
-    "name": "SAMARITAN NORTH LINCOLN HOSPITAL ",
+    "name": "SAMARITAN LEBANON COMMUNITY HOSPITAL ",
+    "address": "525 N SANTIAM HIGHWAY",
+    "City": "LEBANON",
+    "state": "OR",
+    "postcode": "97355",
+    "county license expiry license": "LINN 12/31/25 14-1453",
     "type": "hospital",
     "willBeRemoved": true,
     "position": [
@@ -410,15 +651,26 @@
     ]
   },
   {
-    "name": "SAMARITAN PACIFIC COMMUNITY HOSPITAL",
+    "name": "SAMARITAN NORTH LINCOLN HOSPITAL ",
+    "address": "3043 NE 28TH STREET",
+    "City": "LINCOLN CITY",
+    "state": "OR",
+    "postcode": "97367",
+    "county license expiry license": "LINCOLN 12/31/25 14-1456",
     "type": "hospital",
+    "willBeRemoved": true,
     "position": [
       44.985838,
       -123.994103
     ]
   },
   {
-    "name": "SANTIAM HOSPITAL & CLINICS",
+    "name": "SAMARITAN PACIFIC COMMUNITY HOSPITAL",
+    "address": "930 SW ABBEY STREET",
+    "City": "NEWPORT",
+    "state": "OR",
+    "postcode": "97365",
+    "county license expiry license": " LINCOLN 12/31/25 14-1460",
     "type": "hospital",
     "position": [
       44.628949,
@@ -426,7 +678,12 @@
     ]
   },
   {
-    "name": "SHRINERS HOSPITAL FOR CHILDREN - PORTLAND ",
+    "name": "SANTIAM HOSPITAL & CLINICS",
+    "address": "1401 N 10TH AVENUE",
+    "City": "STAYTON",
+    "state": "OR",
+    "postcode": "97383",
+    "county license expiry license": " MARION 12/31/25 14-0709",
     "type": "hospital",
     "position": [
       44.805217,
@@ -434,7 +691,12 @@
     ]
   },
   {
-    "name": "SKY LAKES MEDICAL CENTER",
+    "name": "SHRINERS HOSPITAL FOR CHILDREN - PORTLAND ",
+    "address": "3101 SW SAM JACKSON PARK ROAD",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97239",
+    "county license expiry license": "MULTNOMAH 12/31/25 14-0073",
     "type": "hospital",
     "position": [
       45.501118,
@@ -442,7 +704,12 @@
     ]
   },
   {
-    "name": "SOUTHERN COOS HOSPITAL & HEALTH CENTER ",
+    "name": "SKY LAKES MEDICAL CENTER",
+    "address": "2865 DAGGETT AVENUE",
+    "City": "KLAMATH FALLS",
+    "state": "OR",
+    "postcode": "97601",
+    "county license expiry license": " KLAMATH 12/31/25 14-0724",
     "type": "hospital",
     "position": [
       42.252821,
@@ -450,7 +717,12 @@
     ]
   },
   {
-    "name": "ST ANTHONY HOSPITAL",
+    "name": "SOUTHERN COOS HOSPITAL & HEALTH CENTER ",
+    "address": "900 11TH STREET SE",
+    "City": "BANDON",
+    "state": "OR",
+    "postcode": "97411",
+    "county license expiry license": "COOS 12/31/25 14-0809",
     "type": "hospital",
     "position": [
       43.112696,
@@ -458,7 +730,12 @@
     ]
   },
   {
-    "name": "ST CHARLES BEND CAMPUS",
+    "name": "ST ANTHONY HOSPITAL",
+    "address": "2801 ST ANTHONY WAY",
+    "City": "PENDLETON",
+    "state": "OR",
+    "postcode": "97801",
+    "county license expiry license": " UMATILLA 12/31/25 14-0034",
     "type": "hospital",
     "position": [
       45.648409,
@@ -466,7 +743,12 @@
     ]
   },
   {
-    "name": "ST CHARLES MADRAS ",
+    "name": "ST CHARLES BEND CAMPUS",
+    "address": "2500 NE NEFF ROAD",
+    "City": "BEND",
+    "state": "OR",
+    "postcode": "97701",
+    "county license expiry license": " DESCHUTES 12/31/25 14-1457",
     "type": "hospital",
     "position": [
       44.068257,
@@ -474,7 +756,12 @@
     ]
   },
   {
-    "name": "ST CHARLES MEDICAL CENTER PRINEVILLE ",
+    "name": "ST CHARLES MADRAS ",
+    "address": "470 NE A STREET",
+    "City": "MADRAS",
+    "state": "OR",
+    "postcode": "97741",
+    "county license expiry license": "JEFFERSON 12/31/25 14-1473",
     "type": "hospital",
     "position": [
       44.637456,
@@ -482,7 +769,12 @@
     ]
   },
   {
-    "name": "ST CHARLES REDMOND CAMPUS",
+    "name": "ST CHARLES MEDICAL CENTER PRINEVILLE ",
+    "address": "384 SE COMBS FLAT ROAD",
+    "City": "PRINEVILLE",
+    "state": "OR",
+    "postcode": "97754",
+    "county license expiry license": "CROOK 12/31/25 14-1466",
     "type": "hospital",
     "position": [
       44.297546,
@@ -490,7 +782,12 @@
     ]
   },
   {
-    "name": "SUTTER COAST HOSPITAL",
+    "name": "ST CHARLES REDMOND CAMPUS",
+    "address": "1253 NW CANAL BLVD",
+    "City": "REDMOND",
+    "state": "OR",
+    "postcode": "97756",
+    "county license expiry license": " DESCHUTES 12/31/25 14-1458",
     "type": "hospital",
     "position": [
       44.288199,
@@ -498,7 +795,12 @@
     ]
   },
   {
-    "name": "VIBRA SPECIALTY HOSPITAL OF PORTLAND",
+    "name": "SUTTER COAST HOSPITAL",
+    "address": "555 5TH STREET",
+    "City": "BROOKINGS",
+    "state": "OR",
+    "postcode": "97415",
+    "county license expiry license": "CURRY 12/31/25 14-1463",
     "type": "hospital",
     "position": [
       42.062375,
@@ -506,7 +808,12 @@
     ]
   },
   {
-    "name": "WALLOWA MEMORIAL HOSPITAL ",
+    "name": "VIBRA SPECIALTY HOSPITAL OF PORTLAND",
+    "address": "10300 NE HANCOCK STREET",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97220",
+    "county license expiry license": "MULTNOMAH 12/31/25 14-1465",
     "type": "hospital",
     "position": [
       45.53549,
@@ -514,7 +821,12 @@
     ]
   },
   {
-    "name": "WILLAMETTE VALLEY MEDICAL CENTER ",
+    "name": "WALLOWA MEMORIAL HOSPITAL ",
+    "address": "601 MEDICAL PARKWAY",
+    "City": "ENTERPRISE",
+    "state": "OR",
+    "postcode": "97828",
+    "county license expiry license": "WALLOWA 12/31/25 14-0068",
     "type": "hospital",
     "position": [
       45.432591,
@@ -522,15 +834,25 @@
     ]
   },
   {
-    "name": "ALMA MIDWIFERY SERVICES, LLC",
-    "type": "birthing center",
+    "name": "WILLAMETTE VALLEY MEDICAL CENTER ",
+    "address": "2700 SE STRATUS AVE. ",
+    "City": "MCMINNVILLE",
+    "state": "OR",
+    "postcode": "97128",
+    "county license expiry license": " YAMHILL 12/31/25 14-1450",
+    "type": "hospital",
     "position": [
       45.199494,
       -123.165675
     ]
   },
   {
-    "name": "ANDALUZ WATERBIRTH CENTER",
+    "name": "ALMA MIDWIFERY SERVICES, LLC",
+    "address": "1608 SE ANKENY STREET",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97214",
+    "county license expiry license": " MULTNOMAH 12/31/25 07-1561",
     "type": "birthing center",
     "position": [
       45.521961,
@@ -538,7 +860,12 @@
     ]
   },
   {
-    "name": "ASTORIA BIRTH CENTER AND FAMILY MEDICINE",
+    "name": "ANDALUZ WATERBIRTH CENTER",
+    "address": "3323 SW NAITO PARKWAY",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97239",
+    "county license expiry license": "MULTNOMAH 12/31/25 07-1672",
     "type": "birthing center",
     "position": [
       45.498986,
@@ -546,23 +873,25 @@
     ]
   },
   {
+    "name": "ASTORIA BIRTH CENTER AND FAMILY MEDICINE",
+    "address": "1406 MARINE DRIVE",
+    "City": "ASTORIA",
+    "state": "OR",
+    "postcode": "97103",
+    "county license expiry license": "CLATSOP 12/31/25 07-1660",
+    "type": "birthing center",
+    "position": [
+      46.1899605,
+      -123.830906
+    ]
+  },
+  {
     "name": "BELLA VIE GENTLE BIRTH CENTER",
-    "type": "birthing center",
-    "position": [
-      46.189498,
-      -123.828017
-    ]
-  },
-  {
-    "name": "BEND BIRTH CENTER",
-    "type": "birthing center",
-    "position": [
-      46.172653,
-      -123.838789
-    ]
-  },
-  {
-    "name": "CANYON MEDICAL CENTER",
+    "address": "13160 JERUSALEM HILL ROAD, NW ",
+    "City": "SALEM",
+    "state": "OR",
+    "postcode": "97304",
+    "county license expiry license": " YAMHILL 12/31/25 07-1587",
     "type": "birthing center",
     "position": [
       44.917382,
@@ -570,31 +899,25 @@
     ]
   },
   {
-    "name": "CORVALLIS BIRTH CENTER ",
+    "name": "BEND BIRTH CENTER",
+    "address": "61533 PARRELL ROAD",
+    "City": "BEND",
+    "state": "OR",
+    "postcode": "97702",
+    "county license expiry license": "DESCHUTES 12/31/25 07-1589",
     "type": "birthing center",
     "position": [
-      44.032858,
-      -121.3062
+      44.0347145,
+      -121.307575
     ]
   },
   {
-    "name": "GROWING FAMILY BIRTH CENTER, LLC ",
-    "type": "birthing center",
-    "position": [
-      44.016271,
-      -121.314869
-    ]
-  },
-  {
-    "name": "KLAMATH BIRTH CENTER",
-    "type": "birthing center",
-    "position": [
-      44.007447,
-      -121.323008
-    ]
-  },
-  {
-    "name": "NOVA VIDA MIDWIVES FREE STANDING BIRTH CENTER ",
+    "name": "CANYON MEDICAL CENTER",
+    "address": "2100 SW CAMELOT COURT",
+    "City": "PORTLAND",
+    "state": "OR",
+    "postcode": "97225",
+    "county license expiry license": "WASHINGTON 12/31/25 07-1629",
     "type": "birthing center",
     "position": [
       45.505186,
@@ -602,7 +925,12 @@
     ]
   },
   {
-    "name": "OREGON BIRTH AND WELLNESS CENTER ",
+    "name": "CORVALLIS BIRTH CENTER ",
+    "address": "2314 NW KINGS BOULEVARD, SUITE A",
+    "City": "CORVALLIS",
+    "state": "OR",
+    "postcode": "97330",
+    "county license expiry license": "BENTON 12/31/25 07-1683",
     "type": "birthing center",
     "position": [
       44.577978,
@@ -610,19 +938,81 @@
     ]
   },
   {
-    "name": "OUR COMMUNITY BIRTH CENTER ",
+    "name": "GROWING FAMILY BIRTH CENTER, LLC ",
+    "address": "701 N 5TH STREET, SUITE B-1010",
+    "City": "LEBANON",
+    "state": "OR",
+    "postcode": "97355",
+    "county license expiry license": "LINN 12/31/25 07-1613",
     "type": "birthing center",
     "position": [
-      44.537703,
-      -122.904672
+      44.5539133,
+      -122.9158349
+    ]
+  },
+  {
+    "name": "KLAMATH BIRTH CENTER",
+    "address": "1803 MAIN STREET, SUITE A",
+    "City": "KLAMATH FALLS",
+    "state": "OR",
+    "postcode": "97601",
+    "county license expiry license": " KLAMATH 12/31/25 07-1676",
+    "type": "birthing center",
+    "position": [
+      42.234169,
+      -121.792788
+    ]
+  },
+  {
+    "name": "NOVA VIDA MIDWIVES FREE STANDING BIRTH CENTER ",
+    "address": "3013 N BANK ROAD",
+    "City": "OTIS",
+    "state": "OR",
+    "postcode": "97368",
+    "county license expiry license": "LINCOLN 12/31/25 07-1678",
+    "type": "birthing center",
+    "position": [
+      45.0072538,
+      -123.8998472
+    ]
+  },
+  {
+    "name": "OREGON BIRTH AND WELLNESS CENTER ",
+    "address": "890 BELTLINE ROAD",
+    "City": "SPRINGFIELD",
+    "state": "OR",
+    "postcode": "97477",
+    "county license expiry license": "LANE 12/31/25 07-1682",
+    "type": "birthing center",
+    "position": [
+      44.084052,
+      -123.035019
+    ]
+  },
+  {
+    "name": "OUR COMMUNITY BIRTH CENTER ",
+    "address": "188 WEST B STREET, BLDG O",
+    "City": "SPRINGFIELD",
+    "state": "OR",
+    "postcode": "97477",
+    "county license expiry license": " LANE 12/31/25 07-1666",
+    "type": "birthing center",
+    "position": [
+      44.058464,
+      -123.011597
     ]
   },
   {
     "name": "ROGUE BIRTH CENTER, LLC",
+    "address": " 1453 REDWOOD CIRCLE",
+    "City": "GRANTS PASS",
+    "state": "OR",
+    "postcode": "97527",
+    "county license expiry license": "JACKSON 12/31/25 07-1641",
     "type": "birthing center",
     "position": [
-      44.503522,
-      -122.887866
+      42.42427,
+      -123.354157
     ]
   }
 ]

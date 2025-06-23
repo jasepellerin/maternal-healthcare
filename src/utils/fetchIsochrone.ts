@@ -55,7 +55,7 @@ async function fetchIsochronesAllHospitals(excludeRemovedLocations = false) {
 		}
 	}
 	fs.writeFileSync(
-		'hospitals_isochrones_all_batches.geojson',
+		'hospitals_isochrones_all_batches.json',
 		JSON.stringify(featureCollection(allFeatures), null, 2)
 	)
 }
@@ -63,7 +63,7 @@ async function fetchIsochronesAllHospitals(excludeRemovedLocations = false) {
 const mergeIsochrones = () => {
 	const allFeatures = (
 		JSON.parse(
-			fs.readFileSync('hospitals_isochrones_all_batches.geojson', 'utf8')
+			fs.readFileSync('hospitals_isochrones_all_batches.json', 'utf8')
 		) as GeoJSON.FeatureCollection<
 			GeoJSON.Polygon | GeoJSON.MultiPolygon,
 			GeoJSON.GeoJsonProperties
@@ -101,11 +101,15 @@ const mergeIsochrones = () => {
 		}
 	}
 	fs.writeFileSync(
-		'hospitals_isochrones_merged.geojson',
+		'hospitals_isochrones_merged.json',
 		JSON.stringify(featureCollection(mergedFeatures), null, 2)
 	)
 	console.log('Merged isochrones written to hospitals_isochrones_merged.geojson')
 }
 
-fetchIsochronesAllHospitals(true)
-// mergeIsochrones()
+const main = async () => {
+	await fetchIsochronesAllHospitals(false)
+	await mergeIsochrones()
+}
+
+main()
