@@ -44,7 +44,7 @@ const webpackConfig = (env): webpack.Configuration => ({
 		}),
 		new ForkTsCheckerWebpackPlugin({
 			typescript: {
-				memoryLimit: 4096
+				memoryLimit: 4096 * 2
 			}
 		}),
 		new ESLintPlugin({ files: './src/**/*.{ts,tsx,js,jsx}', emitWarning: false })
