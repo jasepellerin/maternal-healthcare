@@ -131,8 +131,8 @@ export const HeatmapLegend = ({ popDensity }: { popDensity: boolean }) => {
 
 			<div style={{ display: 'flex', flexDirection: 'column', gap: 10 }}>
 				<IconSection label="Hospital" color="#1976d2" iconLabel="H" />
-				<IconSection label="Birth Center" color="#00bcd4" iconLabel="B" />
-				<IconSection label="Home-Access Midwife" color="#43a047" iconLabel="M" />
+				<IconSection label="Birth Center" color="#673C4F" iconLabel="B" />
+				<IconSection label="Home-Access Midwife" color="#00635D" iconLabel="M" />
 			</div>
 		</div>
 	)

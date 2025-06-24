@@ -20,13 +20,13 @@ export const Map = () => {
 
 	const birthCenterIcon = L.divIcon({
 		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#00bcd4;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">B</div>`,
+		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#673C4F;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">B</div>`,
 		iconAnchor: [markerSize / 2, markerSize / 2]
 	})
 
 	const homeAccessMidwifeIcon = L.divIcon({
 		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#43a047;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">M</div>`,
+		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#00635D;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">M</div>`,
 		iconAnchor: [markerSize / 2, markerSize / 2]
 	})
 
@@ -54,7 +54,7 @@ export const Map = () => {
 									? birthCenterIcon
 									: homeAccessMidwifeIcon
 						return (
-							<Marker key={h.name} position={h.position} icon={icon} zIndexOffset={1000}>
+							<Marker key={h.name} alt={h.name} title={h.name} position={h.position} icon={icon} zIndexOffset={1000}>
 								<Popup>{h.name}</Popup>
 							</Marker>
 						)
