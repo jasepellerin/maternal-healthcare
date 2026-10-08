@@ -1,6 +1,6 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
-import 'leaflet/dist/leaflet.css'
-import L from 'leaflet'
+import MapLibre, { Marker, NavigationControl, Popup } from 'react-map-gl/maplibre'
+import { setWorkerUrl } from 'maplibre-gl'
+import 'maplibre-gl/dist/maplibre-gl.css'
 import { hospitals } from '../data/mapData'
 import { HeatmapOverlay } from './HeatmapOverlay'
 import { PopDensityOverlay } from './PopDensityOverlay'
@@ -9,65 +9,86 @@ import { useState } from 'react'
 
 const markerSize = 20
 
+setWorkerUrl(new URL('maplibre-gl/dist/maplibre-gl-worker.mjs', import.meta.url).href)
+
 export const Map = () => {
 	const [selectedIsochrones, setSelectedIsochrones] = useState<'all' | 'removed'>('all')
 	const [popDensityLayer, setPopDensityLayer] = useState(false)
-	const hospitalIcon = L.divIcon({
-		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#0D5257;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">H</div>`,
-		iconAnchor: [markerSize / 2, markerSize / 2]
-	})
-
-	const birthCenterIcon = L.divIcon({
-		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#D73F09;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">B</div>`,
-		iconAnchor: [markerSize / 2, markerSize / 2]
-	})
-
-	const homeAccessMidwifeIcon = L.divIcon({
-		className: '',
-		html: `<div style="display:flex;align-items:center;justify-content:center;width:${markerSize}px;height:${markerSize}px;border-radius:50%;background:#42033D;color:#fff;font-weight:bold;font-size:${markerSize * 0.7}px;box-shadow:0 1px 4px rgba(0,0,0,0.3);border:2px solid #fff;">M</div>`,
-		iconAnchor: [markerSize / 2, markerSize / 2]
-	})
+	const [selectedHospital, setSelectedHospital] = useState<(typeof hospitals)[number] | null>(null)
 
 	return (
 		<div style={{ position: 'relative', display: 'flex', flexDirection: 'column', gap: 12 }}>
-			<MapContainer
-				center={[43.8041, -120.5542]}
-				zoom={7}
+			<MapLibre
+				initialViewState={{ latitude: 43.8041, longitude: -120.5542, zoom: 7 }}
 				style={{ height: '800px', width: '100%' }}
+				mapStyle="https://data.lfmaps.fr/styles/positron"
+				maxZoom={20}
+				dragRotate={false}
+				pitchWithRotate={false}
+				touchPitch={false}
+				onLoad={(event) => event.target.touchZoomRotate.disableRotation()}
 			>
-				<TileLayer
-					url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png"
-					attribution="&copy; <a href='https://www.openstreetmap.org/copyright'>OpenStreetMap</a> contributors &copy; <a href='https://carto.com/attributions'>CARTO</a>"
-					maxZoom={20}
-				/>
+				<NavigationControl position="top-left" showCompass={false} />
 				<HeatmapOverlay selectedIsochrones={selectedIsochrones} />
 				{popDensityLayer && <PopDensityOverlay />}
 				{hospitals
 					.filter((h) => selectedIsochrones === 'all' || !h.willBeRemoved)
 					.map((h) => {
-						const icon =
+						const [label, color] =
 							h.type === 'hospital'
-								? hospitalIcon
+								? ['H', '#0D5257']
 								: h.type === 'birthing center'
-									? birthCenterIcon
-									: homeAccessMidwifeIcon
+									? ['B', '#D73F09']
+									: ['M', '#42033D']
 						return (
 							<Marker
 								key={h.name}
-								alt={h.name}
-								title={h.name}
-								position={h.position}
-								icon={icon}
-								zIndexOffset={1000}
+								latitude={h.position[0]}
+								longitude={h.position[1]}
+								anchor="center"
+								style={{ zIndex: 3 }}
 							>
-								<Popup>{h.name}</Popup>
+								<button
+									aria-label={h.name}
+									title={h.name}
+									onClick={() => setSelectedHospital(h)}
+									style={{
+										display: 'flex',
+										alignItems: 'center',
+										justifyContent: 'center',
+										width: markerSize,
+										height: markerSize,
+										padding: 0,
+										borderRadius: '50%',
+										background: color,
+										color: '#fff',
+										fontWeight: 'bold',
+										fontSize: markerSize * 0.7,
+										boxShadow: '0 1px 4px rgba(0,0,0,0.3)',
+										border: '2px solid #fff',
+										cursor: 'pointer'
+									}}
+								>
+									{label}
+								</button>
 							</Marker>
 						)
 					})}
+				{selectedHospital &&
+					(selectedIsochrones === 'all' || !selectedHospital.willBeRemoved) && (
+						<Popup
+							latitude={selectedHospital.position[0]}
+							longitude={selectedHospital.position[1]}
+							offset={markerSize / 2}
+							closeOnClick={false}
+							onClose={() => setSelectedHospital(null)}
+							style={{ zIndex: 4 }}
+						>
+							{selectedHospital.name}
+						</Popup>
+					)}
 				<HeatmapLegend popDensity={popDensityLayer} />
-			</MapContainer>
+			</MapLibre>
 			<div
 				style={{
 					display: 'flex',
