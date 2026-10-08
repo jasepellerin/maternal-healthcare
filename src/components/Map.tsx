@@ -74,19 +74,18 @@ export const Map = () => {
 							</Marker>
 						)
 					})}
-				{selectedHospital &&
-					(selectedIsochrones === 'all' || !selectedHospital.willBeRemoved) && (
-						<Popup
-							latitude={selectedHospital.position[0]}
-							longitude={selectedHospital.position[1]}
-							offset={markerSize / 2}
-							closeOnClick={false}
-							onClose={() => setSelectedHospital(null)}
-							style={{ zIndex: 4 }}
-						>
-							{selectedHospital.name}
-						</Popup>
-					)}
+				{selectedHospital && (selectedIsochrones === 'all' || !selectedHospital.willBeRemoved) && (
+					<Popup
+						latitude={selectedHospital.position[0]}
+						longitude={selectedHospital.position[1]}
+						offset={markerSize / 2}
+						closeOnClick={false}
+						onClose={() => setSelectedHospital(null)}
+						style={{ zIndex: 4 }}
+					>
+						{selectedHospital.name}
+					</Popup>
+				)}
 				<HeatmapLegend popDensity={popDensityLayer} />
 			</MapLibre>
 			<div

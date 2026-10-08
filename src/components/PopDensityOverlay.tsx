@@ -45,6 +45,7 @@ export const PopDensityOverlay = () => {
 		canvas.style.opacity = '0.5'
 
 		const draw = () => {
+			canvas.style.visibility = 'visible'
 			const container = map.getContainer()
 			const width = container.clientWidth
 			const height = container.clientHeight
@@ -83,11 +84,17 @@ export const PopDensityOverlay = () => {
 		}
 
 		draw()
-		map.on('move', draw)
+		// Hide the overlay while moving rather than reprojecting the full dataset every frame.
+		const hide = () => {
+			canvas.style.visibility = 'hidden'
+		}
+		map.on('movestart', hide)
+		map.on('moveend', draw)
 		map.on('resize', draw)
 
 		return () => {
-			map.off('move', draw)
+			map.off('movestart', hide)
+			map.off('moveend', draw)
 			map.off('resize', draw)
 			if (canvas.parentNode === overlayPane) {
 				overlayPane.removeChild(canvas)
