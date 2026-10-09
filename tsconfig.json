@@ -12,7 +12,7 @@
 		"baseUrl": "./",
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
-		"moduleResolution": "node",
+		"moduleResolution": "bundler",
 		"downlevelIteration": true,
 		"paths": {
 			"components/*": ["src/components/*"]
